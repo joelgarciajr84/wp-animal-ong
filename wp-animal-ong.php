@@ -11,5 +11,20 @@
 */
 
 
+require_once dirname( __FILE__ ) . '/cpts/cpts.php';
+require_once dirname( __FILE__ ) . '/cfgs/cfgs.php';
+
+
+#Importacao dos javascripts necessarios
+
+#js
+add_action( 'admin_enqueue_scripts', 'jsnecessarios' );
+	function jsnecessarios() {
+
+		
+		wp_enqueue_script(  'maskedinput', plugins_url('/js/jquery.maskedinput.js', __FILE__));
+
+		wp_enqueue_script(  'mascaras', plugins_url('/js/mascaras.js', __FILE__));
+	}
 
 ?>
