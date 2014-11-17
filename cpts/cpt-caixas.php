@@ -125,13 +125,15 @@ function cria_manage_caixas_columns( $column, $post_id ) {
 
       $saldo = get_post_meta( $post_id, 'saldo', true );
 
-      if ( empty( $saldo ) )
+      if ($saldo < 0) {
 
-      echo __( 'Não cadastrado' );
+        echo '<p style="color: red";>'. "R$ " . $saldo . '</p>'; 
+      }
+      elseif($saldo >= 0){
 
-      else
-       echo "R$ " . $saldo; 
-     break;
-  } 
-}
+        echo '<p style="color: green";>'. "R$ " . $saldo . '</p>'; 
+      }
+      break;
+    } 
+  }
 ?>

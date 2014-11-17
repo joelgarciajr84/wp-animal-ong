@@ -59,8 +59,6 @@ function lancamentocaixa($lancamentocaixa) {
 
   $caixalancamento = get_post_meta( $lancamentocaixa->ID, 'caixa_lancamento', true );
 
-
-
   $tipolancamento = get_post_meta( $lancamentocaixa->ID, 'tipo_lancamento', true );
 
   $args = array(
@@ -131,8 +129,14 @@ function salva_metas_lancamentocaixa( $lancamentocaixa_id, $lancamentocaixa ) {
 
       $saldoatual = get_post_meta( $caixalancamento, "saldo", true);
 
-      $novosaldo = $saldoatual + $_POST['valor_lancamento'];
+      if ($_POST['tipo_lancamento'] == "Entrada") {
 
+        $novosaldo = $saldoatual + $_POST['valor_lancamento'];
+      }elseif ($_POST['tipo_lancamento'] == "Saida") {
+        
+       $novosaldo = $saldoatual - $_POST['valor_lancamento'];
+      }
+      
       update_post_meta($caixalancamento, 'saldo', $novosaldo);
 
     }
@@ -146,9 +150,8 @@ function cria_edit_lancamentocaixa_columns( $columns ) {
 
 $columns = array(
   'cb' => '<input type="checkbox" />',
-  'title' => __( 'Caixa' ),
-  'responsavel' => __('Responsavel'),
-  'saldo' => __('Saldo')
+  'title' => __( 'Lancamento' ),
+  'valor' => __('Valor'),
 );
 
 return $columns;
@@ -160,29 +163,18 @@ function cria_manage_lancamentocaixa_columns( $column, $post_id ) {
 
   switch( $column ) {
 
-    case 'responsavel' :
+    case 'valor' :
 
-      $responsavel = get_post_meta( $post_id, 'responsavel', true );
+      $valor = get_post_meta( $post_id, 'valor_lancamento', true );
 
-      if ( empty( $responsavel ) )
+      if ( empty( $valor ) )
 
       echo __( 'Não cadastrado' );
 
       else
-            echo $responsavel; 
+            echo $valor; 
     break;
 
-    case 'saldo' :
-
-      $saldo = get_post_meta( $post_id, 'saldo', true );
-
-      if ( empty( $saldo ) )
-
-      echo __( 'Não cadastrado' );
-
-      else
-       echo $saldo; 
-     break;
   } 
 }
 ?>
