@@ -61,7 +61,7 @@ function associados($associados) {
 <p>
   <label  for="cpf">CPF:</label>
   <br />
-  <input  type="text" id="cpf1" class="widefat"  name="cpf" value="<?php echo get_post_meta( $associados->ID, 'cpf', true ); ?>" />
+  <input  type="text" id="cpf1"  width="50px"  name="cpf" value="<?php echo get_post_meta( $associados->ID, 'cpf', true ); ?>" />
 </p>
 <p>
   <label  for="nasci">Data de nascimento:</label>
