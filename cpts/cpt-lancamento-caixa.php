@@ -28,7 +28,7 @@ function register_cpt_lancamento_caixas() {
     'taxonomies' => array(''),
     'public' => true,
     'show_ui' => true,
-    'show_in_menu' => true,
+    'show_in_menu' => 'menu-financeiro',
     'menu_position' => 5,
     'show_in_nav_menus' => true,
     'publicly_queryable' => true,
@@ -56,7 +56,19 @@ function lanca_Caixa_dados() {
   );
 }
 function lancamentocaixa($lancamentocaixa) {
-
+?>
+  <script>
+  function moeda(z){  
+    v = z.value;
+    v=v.replace(/\D/g,"")  //permite digitar apenas números
+  v=v.replace(/[0-9]{12}/,"inválido")   //limita pra máximo 999.999.999,99
+  v=v.replace(/(\d{1})(\d{8})$/,"$1.$2")  //coloca ponto antes dos últimos 8 digitos
+  v=v.replace(/(\d{1})(\d{5})$/,"$1.$2")  //coloca ponto antes dos últimos 5 digitos
+  v=v.replace(/(\d{1})(\d{1,2})$/,"$1,$2")  //coloca virgula antes dos últimos 2 digitos
+    z.value = v;
+  }
+</script>
+<?php
   $caixalancamento = get_post_meta( $lancamentocaixa->ID, 'caixa_lancamento', true );
 
   $tipolancamento = get_post_meta( $lancamentocaixa->ID, 'tipo_lancamento', true );
@@ -90,12 +102,22 @@ function lancamentocaixa($lancamentocaixa) {
 
   echo '</select>';
 
-  echo '<br>';
 ?>
   <p>
     <label  for="valor_lancamento">Valor do Lancamento:</label>
     <br />
-    <p>R$ <input  type="text" width="50px"  name="valor_lancamento" value="<?php echo get_post_meta( $lancamentocaixa->ID, 'valor_lancamento', true ); ?>" /></p>
+    <p>R$ <input  type="text" class="widefat"  name="valor_lancamento" onKeyUp="moeda(this)" value="<?php echo get_post_meta( $lancamentocaixa->ID, 'valor_lancamento', true ); ?>" /></p>
+  </p>
+  <p>
+
+  <?php 
+
+    $usuario = wp_get_current_user();
+
+   ?>
+    <label  for="responsavel">Responsavel:</label>
+    <br />
+    <p><input  type="text" width="50px"  name="responsavel" value="<?php echo $usuario->user_login ;?>" /></p>
   </p>
 <?php
     
@@ -111,6 +133,7 @@ function lancamentocaixa($lancamentocaixa) {
 }
 add_action( 'save_post', 'salva_metas_lancamentocaixa', 10, 2 );
 
+
 function salva_metas_lancamentocaixa( $lancamentocaixa_id, $lancamentocaixa ) {
 
   global $post;
@@ -121,9 +144,17 @@ function salva_metas_lancamentocaixa( $lancamentocaixa_id, $lancamentocaixa ) {
     if(!defined('DOING_AJAX')) {
 
 
-      update_post_meta( $lancamentocaixa_id, 'caixa_lancamento', strip_tags( $_POST['caixa_lancamento'] ) );
+      
+        
+        echo "<script>alert('Voce nao escolheu o caixa para a Operacao')</script>";
+ 
+
+        update_post_meta( $lancamentocaixa_id, 'caixa_lancamento', strip_tags( $_POST['caixa_lancamento'] ) );
+    
+
       update_post_meta( $lancamentocaixa_id, 'valor_lancamento', strip_tags( $_POST['valor_lancamento'] ) );
       update_post_meta( $lancamentocaixa_id, 'tipo_lancamento', strip_tags( $_POST['tipo_lancamento'] ) );
+      update_post_meta( $lancamentocaixa_id, 'responsavel', strip_tags( $_POST['responsavel'] ) );
 
       $caixalancamento = get_post_meta( $lancamentocaixa->ID, 'caixa_lancamento', true );
 
@@ -151,7 +182,11 @@ function cria_edit_lancamentocaixa_columns( $columns ) {
 $columns = array(
   'cb' => '<input type="checkbox" />',
   'title' => __( 'Lancamento' ),
+  'caixa' => __('Caixa'),
   'valor' => __('Valor'),
+  'operacao' => __('Operacao'),
+  'responsavel' => __('Responsavel'),
+
 );
 
 return $columns;
@@ -161,7 +196,23 @@ add_action( 'manage_lancamentocaixa_posts_custom_column', 'cria_manage_lancament
 function cria_manage_lancamentocaixa_columns( $column, $post_id ) {
   global $post;
 
+  $caixalancamento = get_post_meta( $post->ID, 'caixa_lancamento', true );
+
+  $tipolancamento = get_post_meta( $post->ID, 'tipo_lancamento', true );
+
   switch( $column ) {
+
+
+    case 'caixa' :
+
+      $caixa = get_post($caixalancamento);
+
+      if ( empty( $caixa ) )
+
+        echo __( 'Não cadastrado' );
+      else
+        echo '<p>'. $caixa->post_title;  '</p>';
+    break;
 
     case 'valor' :
 
@@ -169,12 +220,30 @@ function cria_manage_lancamentocaixa_columns( $column, $post_id ) {
 
       if ( empty( $valor ) )
 
-      echo __( 'Não cadastrado' );
-
+        echo __( 'Não cadastrado' );
       else
-            echo $valor; 
+        echo "R$ ". $valor; 
     break;
 
+    case 'operacao' :
+
+      if ( empty( $tipolancamento ) )
+
+        echo __( 'Não cadastrado' );
+      else
+         echo '<p>'. $tipolancamento;  '</p>';
+    break;
+
+     case 'responsavel' :
+
+     $responsavel = get_post_meta( $post_id, 'responsavel', true );
+
+      if ( empty( $responsavel ) )
+
+        echo __( 'Não cadastrado' );
+      else
+         echo '<p>'. $responsavel;  '</p>';
+    break;
   } 
 }
 ?>

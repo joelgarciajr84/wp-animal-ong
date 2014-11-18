@@ -28,7 +28,7 @@ function register_cpt_medicamentos() {
     'taxonomies' => array(''),
     'public' => true,
     'show_ui' => true,
-    'show_in_menu' => true,
+    'show_in_menu' => 'menu-farmacia',
     'menu_position' => 5,
     'show_in_nav_menus' => true,
     'publicly_queryable' => true,
@@ -51,7 +51,7 @@ function medicamentos_dados() {
     __('Dados do Medicamento','wpanimal'),
     'medicamentos',
     'medicamentos',
-    'side'
+    'normal'
   );
 }
 function medicamentos($medicamentos) {
@@ -136,16 +136,16 @@ add_filter( 'manage_edit-medicamentos_columns', 'cria_edit_medicamentos_columns'
 
 function cria_edit_medicamentos_columns( $columns ) {
 
-$columns = array(
-  'cb' => '<input type="checkbox" />',
-  'title' => __( 'Remedio' ),
-  'marca' => __('Marca'),
-  'tipo' => __('Tipo'),
-  'estoque' => __('Estoque'),
-  'thumbnail' => __('Foto')
-);
+  $columns = array(
+    'cb' => '<input type="checkbox" />',
+    'title' => __( 'Medicamento' ),
+    'marca' => __('Marca'),
+    'tipo' => __('Tipo'),
+    'estoque' => __('Estoque'),
+    'thumbnail' => __('Foto')
+  );
 
-return $columns;
+  return $columns;
 }
 add_action( 'manage_medicamentos_posts_custom_column', 'cria_manage_medicamentos_columns', 10, 2 );
 
@@ -179,7 +179,7 @@ function cria_manage_medicamentos_columns( $column, $post_id ) {
      break;
      case 'estoque' :
 
-      $estoque = get_post_meta( $post_id, 'fone', true );
+      $estoque = get_post_meta( $post_id, 'estoque', true );
 
       if ( empty( $estoque ) )
 

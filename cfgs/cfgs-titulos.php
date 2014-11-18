@@ -8,7 +8,19 @@ function titulos_personalizados( $input ) {
     global $post_type;
 
     if ('associados' == $post_type )
-        return __( 'Digite o nome do Associado', 'helpdesk' );
+        return __( 'Digite o nome do Associado', 'wpanimal' );
+
+    if ('medicamentos' == $post_type )
+        return __( 'Digite o nome do Medicamento', 'wpanimal' );
+
+    if ('caixas' == $post_type )
+        return __( 'Digite o nome do Caixa', 'wpanimal' );
+
+    if ('lancamentocaixa' == $post_type )
+        return __( 'Digite o Titulo do Lancamento', 'wpanimal' );
+
+     if ('animal' == $post_type )
+        return __( 'Digite o nome do Animal', 'wpanimal' );
     
 
     return $input;

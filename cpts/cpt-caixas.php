@@ -28,7 +28,7 @@ function register_cpt_caixas() {
     'taxonomies' => array(''),
     'public' => true,
     'show_ui' => true,
-    'show_in_menu' => true,
+    'show_in_menu' => 'menu-financeiro',
     'menu_position' => 5,
     'show_in_nav_menus' => true,
     'publicly_queryable' => true,
@@ -132,6 +132,9 @@ function cria_manage_caixas_columns( $column, $post_id ) {
       elseif($saldo >= 0){
 
         echo '<p style="color: green";>'. "R$ " . $saldo . '</p>'; 
+      }elseif($saldo == 0){
+
+        echo '<p style="color: orange";>'. "R$ 0,00" .'</p>'; 
       }
       break;
     } 
