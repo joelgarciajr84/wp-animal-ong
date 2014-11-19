@@ -55,13 +55,14 @@ function caixas_dados() {
   );
 }
 function caixas($caixas) {
-
+  setlocale(LC_MONETARY, 'pt_BR');
+  $saldoatual = get_post_meta( $caixas->ID, 'saldo', true );
+  $saldoatual = money_format('%i', $saldoatual);
 ?>
-
   <p>
-    <label  for="saldo">Saldo:</label>
+    <strong>Saldo:</strong>
     <br />
-    <input  type="text" width="50px"  name="saldo" value="<?php echo get_post_meta( $caixas->ID, 'saldo', true ); ?>" />
+    <strong>R$</strong><input style="width: 80%"  type="text" name="saldo" value="<?php echo  $saldoatual; ?>" />
   </p>
   <p>
     <label  for="responsavel">Responsavel:</label>
@@ -118,7 +119,7 @@ function cria_manage_caixas_columns( $column, $post_id ) {
       echo __( 'Não cadastrado' );
 
       else
-            echo $responsavel; 
+      echo "<strong>$responsavel</strong>"; 
     break;
 
     case 'saldo' :
@@ -127,14 +128,14 @@ function cria_manage_caixas_columns( $column, $post_id ) {
 
       if ($saldo < 0) {
 
-        echo '<p style="color: red";>'. "R$ " . $saldo . '</p>'; 
+        echo '<strong style="color: red";>'. "R$ " . $saldo . '</strong>'; 
       }
       elseif($saldo >= 0){
 
-        echo '<p style="color: green";>'. "R$ " . $saldo . '</p>'; 
+        echo '<strong style="color: green";>'. "R$ " . $saldo . '</strong>'; 
       }elseif($saldo == 0){
 
-        echo '<p style="color: orange";>'. "R$ 0,00" .'</p>'; 
+        echo '<strong style="color: orange";>'. "R$ 0,00" .'</strong>'; 
       }
       break;
     } 

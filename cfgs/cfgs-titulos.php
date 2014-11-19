@@ -7,8 +7,8 @@ add_filter( 'enter_title_here', 'titulos_personalizados' );
 function titulos_personalizados( $input ) {
     global $post_type;
 
-    if ('associados' == $post_type )
-        return __( 'Digite o nome do Associado', 'wpanimal' );
+    if ('apoiador' == $post_type )
+        return __( 'Digite o nome', 'wpanimal' );
 
     if ('medicamentos' == $post_type )
         return __( 'Digite o nome do Medicamento', 'wpanimal' );
@@ -21,6 +21,9 @@ function titulos_personalizados( $input ) {
 
      if ('animal' == $post_type )
         return __( 'Digite o nome do Animal', 'wpanimal' );
+
+    if ('veterinario' == $post_type )
+        return __( 'Digite o nome do Veterinario', 'wpanimal' );
     
 
     return $input;
@@ -32,7 +35,7 @@ function change_image_box(){
     remove_meta_box(
 
         'postimagediv',
-        'associados', 
+        'apoiador', 
         'side'
     );
     add_meta_box(
@@ -40,7 +43,23 @@ function change_image_box(){
         'postimagediv',
         __('Foto'),
         'post_thumbnail_meta_box',
-        'associados',
+        'apoiador',
+        'side', 
+        'high'
+    ); 
+
+     remove_meta_box(
+
+        'postimagediv',
+        'veterinario', 
+        'side'
+    );
+    add_meta_box(
+
+        'postimagediv',
+        __('Foto'),
+        'post_thumbnail_meta_box',
+        'veterinario',
         'side', 
         'high'
     ); 

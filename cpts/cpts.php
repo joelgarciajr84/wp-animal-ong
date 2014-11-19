@@ -2,7 +2,7 @@
 
 #Invocacao de Custom Post Types
 
-require_once dirname( __FILE__ ) . '/cpt-associados.php';
+require_once dirname( __FILE__ ) . '/cpt-apoiadores.php';
 require_once dirname( __FILE__ ) . '/cpt-medicamentos.php';
 require_once dirname( __FILE__ ) . '/cpt-entrada-medicamentos.php';
 require_once dirname( __FILE__ ) . '/cpt-aplicacao-medicamentos.php';

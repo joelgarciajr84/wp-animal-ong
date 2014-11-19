@@ -26,10 +26,10 @@ function Menu_WP_Animal_ONG (){
 	if ( current_user_can('moderate_comments') ) {
 
 		add_menu_page( 
-			'Associados',
-			'Associados',
+			'Apoiadores',
+			'Apoiadores',
 			'6',
-			'menu-associados',
+			'menu-apoiadores',
 			'',
 			plugins_url('wp-animal-ong/images/associados.png'),
 			'101'
@@ -92,19 +92,19 @@ function custom_menu_order($menu_ord) {
 		return array(
 
 			'index.php', // Dashboard
-			'menu-associados',
+			'menu-apoiadores',
 			'menu-financeiro',
+
+			'separator1',
+
 			'menu-animais',
 			'menu-farmacia',
 			'menu-veterinarios',
 			'menu-lares',
-			
-			//'help-desk/relatorios.php',
-			//'separator2', Segundo separador
-			//'help-desk/formacoes.php',
+		
 			//'separator-last', Ultimo Separador
-			'separator1',
 			#'edit.php', // Posts normais
+			'separator2', //Segundo separador
 			'upload.php', // Manipulação de Media
 			#'link-manager.php', // Links
 			#'edit.php?post_type=page', // Páginas

@@ -62,8 +62,8 @@ function lancamentocaixa($lancamentocaixa) {
     v = z.value;
     v=v.replace(/\D/g,"")  //permite digitar apenas números
   v=v.replace(/[0-9]{12}/,"inválido")   //limita pra máximo 999.999.999,99
-  v=v.replace(/(\d{1})(\d{8})$/,"$1.$2")  //coloca ponto antes dos últimos 8 digitos
-  v=v.replace(/(\d{1})(\d{5})$/,"$1.$2")  //coloca ponto antes dos últimos 5 digitos
+ v=v.replace(/(\d{1})(\d{8})$/,"$1,$2")  //coloca ponto antes dos últimos 8 digitos
+ v=v.replace(/(\d{1})(\d{5})$/,"$1.$2")  //coloca ponto antes dos últimos 5 digitos
   v=v.replace(/(\d{1})(\d{1,2})$/,"$1,$2")  //coloca virgula antes dos últimos 2 digitos
     z.value = v;
   }
@@ -90,9 +90,6 @@ function lancamentocaixa($lancamentocaixa) {
   echo '<select class="widefat" name="caixa_lancamento" id="caixa_lancamento">';
 
   echo '<option value="">Selecione um Caixa</option>';
-
- 
-
 
   foreach ($caixaescolhido as $caixa) {
   ?>
@@ -136,6 +133,9 @@ add_action( 'save_post', 'salva_metas_lancamentocaixa', 10, 2 );
 
 function salva_metas_lancamentocaixa( $lancamentocaixa_id, $lancamentocaixa ) {
 
+  setlocale(LC_MONETARY, 'pt_BR');
+
+
   global $post;
 
   if ($post->post_type == 'lancamentocaixa') {
@@ -144,14 +144,7 @@ function salva_metas_lancamentocaixa( $lancamentocaixa_id, $lancamentocaixa ) {
     if(!defined('DOING_AJAX')) {
 
 
-      
-        
-        echo "<script>alert('Voce nao escolheu o caixa para a Operacao')</script>";
- 
-
-        update_post_meta( $lancamentocaixa_id, 'caixa_lancamento', strip_tags( $_POST['caixa_lancamento'] ) );
-    
-
+      update_post_meta( $lancamentocaixa_id, 'caixa_lancamento', strip_tags( $_POST['caixa_lancamento'] ) );
       update_post_meta( $lancamentocaixa_id, 'valor_lancamento', strip_tags( $_POST['valor_lancamento'] ) );
       update_post_meta( $lancamentocaixa_id, 'tipo_lancamento', strip_tags( $_POST['tipo_lancamento'] ) );
       update_post_meta( $lancamentocaixa_id, 'responsavel', strip_tags( $_POST['responsavel'] ) );
@@ -162,34 +155,38 @@ function salva_metas_lancamentocaixa( $lancamentocaixa_id, $lancamentocaixa ) {
 
       if ($_POST['tipo_lancamento'] == "Entrada") {
 
-        $novosaldo = $saldoatual + $_POST['valor_lancamento'];
-      }elseif ($_POST['tipo_lancamento'] == "Saida") {
+      $novosaldo = $saldoatual + $_POST['valor_lancamento'];
         
-       $novosaldo = $saldoatual - $_POST['valor_lancamento'];
+      }elseif ($_POST['tipo_lancamento'] == "Saida"){
+
+        $novosaldo = $saldoatual - $_POST['valor_lancamento'];
       }
-      
-      update_post_meta($caixalancamento, 'saldo', $novosaldo);
+
+      update_post_meta($caixalancamento, 'saldo', money_format('%i', $novosaldo));
 
     }
   }
   return true;
 }
+
+
 # Colunas Externas
+
+
 add_filter( 'manage_edit-lancamentocaixa_columns', 'cria_edit_lancamentocaixa_columns' ) ;
 
 function cria_edit_lancamentocaixa_columns( $columns ) {
 
-$columns = array(
-  'cb' => '<input type="checkbox" />',
-  'title' => __( 'Lancamento' ),
-  'caixa' => __('Caixa'),
-  'valor' => __('Valor'),
-  'operacao' => __('Operacao'),
-  'responsavel' => __('Responsavel'),
+  $columns = array(
+    'cb' => '<input type="checkbox" />',
+    'title' => __( 'Lancamento' ),
+    'caixa' => __('Caixa'),
+    'valor' => __('Valor'),
+    'operacao' => __('Operacao'),
+    'responsavel' => __('Responsavel'),
+  );
 
-);
-
-return $columns;
+  return $columns;
 }
 add_action( 'manage_lancamentocaixa_posts_custom_column', 'cria_manage_lancamentocaixa_columns', 10, 2 );
 
@@ -202,7 +199,6 @@ function cria_manage_lancamentocaixa_columns( $column, $post_id ) {
 
   switch( $column ) {
 
-
     case 'caixa' :
 
       $caixa = get_post($caixalancamento);
@@ -211,7 +207,7 @@ function cria_manage_lancamentocaixa_columns( $column, $post_id ) {
 
         echo __( 'Não cadastrado' );
       else
-        echo '<p>'. $caixa->post_title;  '</p>';
+        echo '<strong>'. $caixa->post_title;  '</strong>';
     break;
 
     case 'valor' :
@@ -222,7 +218,15 @@ function cria_manage_lancamentocaixa_columns( $column, $post_id ) {
 
         echo __( 'Não cadastrado' );
       else
-        echo "R$ ". $valor; 
+
+        if ($tipolancamento == "Entrada") {
+
+
+         echo '<strong style="color: green";>'. "R$ " . $valor . '</strong>'; 
+        }elseif ($tipolancamento == "Saida") {
+
+          echo '<strong style="color: red";>'. "R$ " . $valor . '</strong>'; 
+        }
     break;
 
     case 'operacao' :
@@ -231,7 +235,7 @@ function cria_manage_lancamentocaixa_columns( $column, $post_id ) {
 
         echo __( 'Não cadastrado' );
       else
-         echo '<p>'. $tipolancamento;  '</p>';
+        echo '<strong>'. $tipolancamento;  '</strong>';
     break;
 
      case 'responsavel' :
@@ -239,10 +243,9 @@ function cria_manage_lancamentocaixa_columns( $column, $post_id ) {
      $responsavel = get_post_meta( $post_id, 'responsavel', true );
 
       if ( empty( $responsavel ) )
-
         echo __( 'Não cadastrado' );
       else
-         echo '<p>'. $responsavel;  '</p>';
+         echo '<strong>'. $responsavel;  '</strong>';
     break;
   } 
 }
