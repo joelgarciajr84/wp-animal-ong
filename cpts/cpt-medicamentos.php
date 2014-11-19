@@ -125,7 +125,7 @@ function salva_metas_medicamentos( $medicamentos_id, $medicamentos ) {
       update_post_meta( $medicamentos_id, 'tipo', strip_tags( $_POST['tipo'] ) );
       update_post_meta( $medicamentos_id, 'composicao', strip_tags( $_POST['composicao'] ) );
       update_post_meta( $medicamentos_id, 'posologia', strip_tags( $_POST['posologia'] ) );
-      update_post_meta( $medicamentos_id, 'estoque', strip_tags( $_POST['estoque'] ) );
+     // update_post_meta( $medicamentos_id, 'estoque', strip_tags( $_POST['estoque'] ) );
 
     }
   }
