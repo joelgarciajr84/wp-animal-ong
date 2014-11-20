@@ -24,7 +24,7 @@ function jsnecessarios() {
 
 	wp_enqueue_script(  'mascaras', plugins_url('/js/mascaras.js', __FILE__));
 }
-#Desabilita o salvamento automatico
+#Desabilita o salvamento automatico de posts
 
 add_action( 'admin_init', 'sem_auto_save' );
 

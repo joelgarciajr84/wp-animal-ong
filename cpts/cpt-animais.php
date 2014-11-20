@@ -41,39 +41,37 @@ function register_cpt_animais() {
   );
   register_post_type( 'animal', $args );
 }
+
 #Metabox Informações do Animal
 
 add_action( 'add_meta_boxes', 'animais_dados' );
 
 function animais_dados() {
-    add_meta_box(
-        'animais_id',
-        __('Dados do Animal','wpanimal'),
-        'animal',
-        'animal',
-        'side'
-    );
+  add_meta_box(
+    'animais_id',
+    __('Dados do Animal','wpanimal'),
+    'animal',
+    'animal',
+    'side'
+  );
 }
 function animal($animal) {
-
 ?>
-
-<p>
-  <label  for="data_resgate">Data do Resgate:</label>
-  <br />
-  <input  type="date" class="widefat" id="data_resgate"  width="50px"  name="data_resgate" value="<?php echo get_post_meta( $animal->ID, 'data_resgate', true ); ?>" />
-</p>
-<p>
-  <label  for="local_resgate">Local do Resgate:</label>
-  <br />
-  <input  type="text" class="widefat"  name="local_resgate" value="<?php echo get_post_meta( $animal->ID, 'local_resgate', true ); ?>" />
-</p>
-<p>
-  <label  for="responsavel">Responsavel:</label>
-  <br />
-  <input  type="text" class="widefat"  name="responsavel" value="<?php echo get_post_meta( $animal->ID, 'responsavel', true ); ?>" />
-</p>
-
+  <p>
+    <label  for="data_resgate">Data do Resgate:</label>
+    <br />
+    <input  type="date" class="widefat" id="data_resgate" name="data_resgate" value="<?php echo get_post_meta( $animal->ID, 'data_resgate', true ); ?>" />
+  </p>
+  <p>
+    <label  for="local_resgate">Local do Resgate:</label>
+    <br />
+    <input  type="text" class="widefat" name="local_resgate" value="<?php echo get_post_meta( $animal->ID, 'local_resgate', true ); ?>" />
+  </p>
+  <p>
+    <label  for="responsavel">Responsavel:</label>
+    <br />
+    <input  type="text" class="widefat" name="responsavel" value="<?php echo get_post_meta( $animal->ID, 'responsavel', true ); ?>" />
+  </p>
 <?php
 }
 add_action( 'save_post', 'salva_metas_animais', 10, 2 );
@@ -83,7 +81,6 @@ function salva_metas_animais( $animal_id, $animal ) {
   global $post;
 
   if ($post->post_type == 'animal') {
-
 
     if(!defined('DOING_AJAX')) {
 
@@ -122,10 +119,10 @@ function cria_manage_animal_columns( $column, $post_id ) {
 
       if ( empty( $dataresgate ) )
 
-      echo __( 'Não cadastrado' );
+      echo "<strong>".__( 'Não cadastrado' ) ."</strong>";
 
       else
-            echo $dataresgate; 
+      echo "<strong>". date("d/m/Y", strtotime($dataresgate))."</strong>"; 
     break;
 
     case 'responsavel' :
@@ -134,10 +131,11 @@ function cria_manage_animal_columns( $column, $post_id ) {
 
       if ( empty( $responsavel ) )
 
-      echo __( 'Não cadastrado' );
+      echo "<strong>".__( 'Não cadastrado' ) ."</strong>";
 
       else
-       echo $responsavel; 
+      
+      echo "<strong>$responsavel</strong>"; 
      break;
      
     case 'thumbnail' :

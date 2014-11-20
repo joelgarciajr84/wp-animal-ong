@@ -55,19 +55,35 @@ function caixas_dados() {
   );
 }
 function caixas($caixas) {
-  setlocale(LC_MONETARY, 'pt_BR');
+
   $saldoatual = get_post_meta( $caixas->ID, 'saldo', true );
-  $saldoatual = money_format('%i', $saldoatual);
+  echo "$saldoatual";
+  //setlocale(LC_MONETARY, 'pt_BR');
+//echo money_format('%.2n', $saldoatual) . "\n";
+
+  //$saldoatual = number_format(floatval($saldoatual), 2, '.', ',');
+  //var_dump($saldoatual);
 ?>
-  <p>
-    <strong>Saldo:</strong>
-    <br />
-    <strong>R$</strong><input style="width: 80%"  type="text" name="saldo" value="<?php echo  $saldoatual; ?>" />
+  <p align="center">
+    <strong style="font-size: 29px;">:: Saldo Atual :: </strong>
+    <br>
+    <?php 
+      
+      if ($saldoatual >= 0) {
+
+        echo '<strong style="font-size: 20px;">R$</strong><input style="width: 89%; color:green; height: 40px;font-size: 29px;" type="text" name="saldo" disabled value=' . number_format($saldoatual, 2,'.',',');'/>';
+
+      }elseif($saldoatual<0){
+
+        echo '<strong style="font-size: 20px;">R$</strong><input style="width: 89%; color:red; height: 40px;font-size: 29px;" type="text" name="saldo" disabled value=' . number_format($saldoatual, 2,','.',');'/>';
+      }
+     ?>
+   
   </p>
-  <p>
-    <label  for="responsavel">Responsavel:</label>
+  <p align="center">
+    <strong style="font-size: 29px;">:: Responsavel :: </strong>
     <br />
-    <input  type="text" width="50px"  name="responsavel" value="<?php echo get_post_meta( $caixas->ID, 'responsavel', true ); ?>" />
+    <input style="width: 100%; color:green; height: 40px;font-size: 29px;"  type="text" name="responsavel" value="<?php echo get_post_meta( $caixas->ID, 'responsavel', true ); ?>" />
   </p>
 <?php
 }
@@ -79,12 +95,8 @@ function salva_metas_caixas( $caixas_id, $caixas ) {
 
   if ($post->post_type == 'caixas') {
 
-
     if(!defined('DOING_AJAX')) {
-
-     
-      update_post_meta( $caixas_id, 'responsavel', strip_tags( $_POST['responsavel'] ) );
-      
+      update_post_meta( $caixas_id, 'responsavel', strip_tags( $_POST['responsavel'] ) );      
     }
   }
   return true;

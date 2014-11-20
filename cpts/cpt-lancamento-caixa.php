@@ -62,7 +62,7 @@ function lancamentocaixa($lancamentocaixa) {
     v = z.value;
     v=v.replace(/\D/g,"")  //permite digitar apenas números
   v=v.replace(/[0-9]{12}/,"inválido")   //limita pra máximo 999.999.999,99
- v=v.replace(/(\d{1})(\d{8})$/,"$1,$2")  //coloca ponto antes dos últimos 8 digitos
+ v=v.replace(/(\d{1})(\d{8})$/,"$1.$2")  //coloca ponto antes dos últimos 8 digitos
  v=v.replace(/(\d{1})(\d{5})$/,"$1.$2")  //coloca ponto antes dos últimos 5 digitos
   v=v.replace(/(\d{1})(\d{1,2})$/,"$1,$2")  //coloca virgula antes dos últimos 2 digitos
     z.value = v;
@@ -100,14 +100,12 @@ function lancamentocaixa($lancamentocaixa) {
   echo '</select>';
 
 ?>
-  <p>
+<p>
     <label  for="valor_lancamento">Valor do Lancamento:</label>
     <br />
     <p>R$ <input  type="text" class="widefat"  name="valor_lancamento" onKeyUp="moeda(this)" value="<?php echo get_post_meta( $lancamentocaixa->ID, 'valor_lancamento', true ); ?>" /></p>
-  </p>
-  <p>
-
-  <?php 
+  </p><p>
+<?php 
 
     $usuario = wp_get_current_user();
 
@@ -133,8 +131,6 @@ add_action( 'save_post', 'salva_metas_lancamentocaixa', 10, 2 );
 
 function salva_metas_lancamentocaixa( $lancamentocaixa_id, $lancamentocaixa ) {
 
-  setlocale(LC_MONETARY, 'pt_BR');
-
 
   global $post;
 
@@ -144,35 +140,41 @@ function salva_metas_lancamentocaixa( $lancamentocaixa_id, $lancamentocaixa ) {
     if(!defined('DOING_AJAX')) {
 
 
-      update_post_meta( $lancamentocaixa_id, 'caixa_lancamento', strip_tags( $_POST['caixa_lancamento'] ) );
-      update_post_meta( $lancamentocaixa_id, 'valor_lancamento', strip_tags( $_POST['valor_lancamento'] ) );
-      update_post_meta( $lancamentocaixa_id, 'tipo_lancamento', strip_tags( $_POST['tipo_lancamento'] ) );
-      update_post_meta( $lancamentocaixa_id, 'responsavel', strip_tags( $_POST['responsavel'] ) );
-
       $caixalancamento = get_post_meta( $lancamentocaixa->ID, 'caixa_lancamento', true );
 
       $saldoatual = get_post_meta( $caixalancamento, "saldo", true);
 
+      $saldoatual = number_format($saldoatual, 2,'.',',');
+
+      $valordolancamento = number_format($_POST['valor_lancamento'],'.' , ',');
+
+      #Tratamento para atualizar Saldo do Caixa
+
       if ($_POST['tipo_lancamento'] == "Entrada") {
 
-      $novosaldo = $saldoatual + $_POST['valor_lancamento'];
-        
+        $novosaldo = $saldoatual + $valordolancamento;
+
       }elseif ($_POST['tipo_lancamento'] == "Saida"){
 
-        $novosaldo = $saldoatual - $_POST['valor_lancamento'];
+        $novosaldo = $saldoatual - $valordolancamento;
       }
 
-      update_post_meta($caixalancamento, 'saldo', money_format('%i', $novosaldo));
+      #Salvamentos
 
+      update_post_meta( $lancamentocaixa_id, 'valor_lancamento', $_POST['valor_lancamento']);
+      update_post_meta( $lancamentocaixa_id, 'caixa_lancamento', strip_tags( $_POST['caixa_lancamento'] ) );
+      update_post_meta( $lancamentocaixa_id, 'tipo_lancamento', strip_tags( $_POST['tipo_lancamento'] ) );
+      update_post_meta( $lancamentocaixa_id, 'responsavel', strip_tags( $_POST['responsavel'] ) );
+
+      #Atualiza saldo do Caixa
+      
+      update_post_meta($caixalancamento, 'saldo', number_format($novosaldo, '.', ','));
     }
   }
   return true;
 }
 
-
 # Colunas Externas
-
-
 add_filter( 'manage_edit-lancamentocaixa_columns', 'cria_edit_lancamentocaixa_columns' ) ;
 
 function cria_edit_lancamentocaixa_columns( $columns ) {
