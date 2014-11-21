@@ -56,34 +56,30 @@ function caixas_dados() {
 }
 function caixas($caixas) {
 
-  $saldoatual = get_post_meta( $caixas->ID, 'saldo', true );
-  echo "$saldoatual";
-  //setlocale(LC_MONETARY, 'pt_BR');
-//echo money_format('%.2n', $saldoatual) . "\n";
+  setlocale(LC_MONETARY, 'pt_BR');
 
-  //$saldoatual = number_format(floatval($saldoatual), 2, '.', ',');
-  //var_dump($saldoatual);
+  $saldoatual = get_post_meta( $caixas->ID, 'saldo', true );
 ?>
   <p align="center">
-    <strong style="font-size: 29px;">:: Saldo Atual :: </strong>
+    <strong style="font-size: 16px;">:: Saldo Atual :: </strong>
     <br>
     <?php 
       
       if ($saldoatual >= 0) {
 
-        echo '<strong style="font-size: 20px;">R$</strong><input style="width: 89%; color:green; height: 40px;font-size: 29px;" type="text" name="saldo" disabled value=' . number_format($saldoatual, 2,'.',',');'/>';
+        echo '<strong style="font-size: 16px;">R$</strong><input style="width: 89%; color:green; height: 40px;font-size: 16px;" type="text" name="saldo" disabled value=' . money_format('%n', $saldoatual);'/>';
 
       }elseif($saldoatual<0){
 
-        echo '<strong style="font-size: 20px;">R$</strong><input style="width: 89%; color:red; height: 40px;font-size: 29px;" type="text" name="saldo" disabled value=' . number_format($saldoatual, 2,','.',');'/>';
+        echo '<strong style="font-size: 16px;">R$</strong><input style="width: 89%; color:red; height: 40px;font-size: 16px;" type="text" name="saldo" disabled value=' . money_format('%n', $saldoatual);'/>';
       }
      ?>
    
   </p>
   <p align="center">
-    <strong style="font-size: 29px;">:: Responsavel :: </strong>
+    <strong style="font-size: 16px;">:: Responsavel :: </strong>
     <br />
-    <input style="width: 100%; color:green; height: 40px;font-size: 29px;"  type="text" name="responsavel" value="<?php echo get_post_meta( $caixas->ID, 'responsavel', true ); ?>" />
+    <input style="width: 100%; color:green; height: 40px;font-size: 16px;"  type="text" name="responsavel" value="<?php echo get_post_meta( $caixas->ID, 'responsavel', true ); ?>" />
   </p>
 <?php
 }
