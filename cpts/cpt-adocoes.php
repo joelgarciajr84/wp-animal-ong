@@ -143,8 +143,7 @@ function salva_metas_adocoes( $adocao_id, $adocao ) {
       update_post_meta( $adocao_id, 'animal_adocao', strip_tags( $_POST['animal_adocao'] ) );
       update_post_meta( $adocao_id, 'adotante_animal', strip_tags( $_POST['adotante_animal'] ) );
       update_post_meta( $adocao_id, 'data_adocao', strip_tags( $_POST['data_adocao'] ) );
-      update_post_meta( $adocao_id, 'data_final', strip_tags( $_POST['data_final'] ) );
-      
+      update_post_meta( $adocao_id, 'data_final', strip_tags( $_POST['data_final'] ) ); 
     }
   }
   return true;
