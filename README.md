@@ -24,6 +24,10 @@ WPAnimal ONG é um plugin para WordPress que visa auxiliar na gestão de ONG's q
 #### Prints:
 
 ![alt text](https://lh6.googleusercontent.com/TjEOXklrOO-QJRsOdJfJH9WrFf12Q8BbzV7ysJuflVdvatr14ljV8VDiqmnK-2d703v2ZiMMWv8=w1831-h995 "Foto 1")
+
+![alt text](https://lh4.googleusercontent.com/uheZXEdJn12x8IgysRWiXAJgONugTAP7GUrDwpit-zt4__USjCYCazJas9W600LxUDAFhB6JKbc=w1831-h995 "Foto 2")
+
+
 ### Dependencias:
 
 Para usar corretamente o sistema voce precisará
