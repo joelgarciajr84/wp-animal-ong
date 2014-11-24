@@ -32,6 +32,7 @@ add_action('do_meta_boxes', 'change_image_box');
 
 function change_image_box(){
 
+    #Apoiador
     remove_meta_box(
 
         'postimagediv',
@@ -47,8 +48,8 @@ function change_image_box(){
         'side', 
         'high'
     ); 
-
-     remove_meta_box(
+    #Veterinario
+    remove_meta_box(
 
         'postimagediv',
         'veterinario', 
@@ -60,6 +61,38 @@ function change_image_box(){
         __('Foto'),
         'post_thumbnail_meta_box',
         'veterinario',
+        'side', 
+        'high'
+    );
+    #Animal
+    remove_meta_box(
+
+        'postimagediv',
+        'animal', 
+        'side'
+    );
+    add_meta_box(
+
+        'postimagediv',
+        __('Foto oficial'),
+        'post_thumbnail_meta_box',
+        'animal',
+        'side', 
+        'high'
+    ); 
+    #Medicamento
+    remove_meta_box(
+
+        'postimagediv',
+        'medicamento', 
+        'side'
+    );
+    add_meta_box(
+
+        'postimagediv',
+        __('Imagem da Caixa'),
+        'post_thumbnail_meta_box',
+        'medicamentos',
         'side', 
         'high'
     ); 

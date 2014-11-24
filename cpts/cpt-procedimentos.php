@@ -150,7 +150,7 @@ $columns = array(
   'cb' => '<input type="checkbox" />',
   'title' => __( 'Procedimento' ),
   'animal' => __('Animal'),
-  'data_procedimento' => __('Data da procedimento'),
+  'data_procedimento' => __('Data da Procedimento'),
   'veterinario' => __('Veterinario'),
   //'thumbnail' => __('Foto')
 );
