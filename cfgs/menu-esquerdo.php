@@ -70,6 +70,16 @@ function Menu_WP_Animal_ONG (){
 			plugins_url('wp-animal-ong/images/lares.png'),
 			'106'
 		);
+		add_menu_page( 
+			'Relatorios',
+			'Relatorios',
+			'6',
+			'wp-animal-ong/relatorios/relatorios.php',
+			'',
+			plugins_url('wp-animal-ong/images/relatorios.png'),
+			'107'
+		);
+
 	}
 }
 
@@ -91,7 +101,7 @@ function custom_menu_order($menu_ord) {
 			'menu-animais',
 			'menu-saude',
 			'menu-adocoes',
-		
+			'menu-relatorios',
 			//'separator-last', Ultimo Separador
 			#'edit.php', // Posts normais
 			'separator2', //Segundo separador
