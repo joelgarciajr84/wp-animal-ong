@@ -95,12 +95,6 @@ function entmed($entmed) {
     <br />
     <p><input  type="text" class="widefat"  name="quantidade" value="<?php echo get_post_meta( $entmed->ID, 'quantidade', true ); ?>" /></p>
   </p>
-  <p>
-  <?php $usuario = wp_get_current_user(); ?>
-    <strong><label  for="responsavel">Responsavel:</label></strong>
-    <br />
-    <p><input  type="text" class="widefat"  name="responsavel" value="<?php echo $usuario->user_login ;?>" /></p>
-  </p>
 <?php
 }
 add_action( 'save_post', 'salva_metas_entmed', 10, 2 );
@@ -117,7 +111,6 @@ function salva_metas_entmed( $entmed_id, $entmed ) {
  
       update_post_meta( $entmed_id, 'medicamento_lancamento', strip_tags( $_POST['medicamento_lancamento'] ) );
       update_post_meta( $entmed_id, 'quantidade', strip_tags( $_POST['quantidade'] ) );
-      update_post_meta( $entmed_id, 'responsavel', strip_tags( $_POST['responsavel'] ) );
 
       $medicamentolancamento = get_post_meta( $entmed->ID, 'medicamento_lancamento', true );
 
@@ -190,14 +183,7 @@ function cria_manage_entmed_columns( $column, $post_id ) {
     break;
 
      case 'responsavel' :
-
-     $responsavel = get_post_meta( $post_id, 'responsavel', true );
-
-      if ( empty( $responsavel ) )
-
-        echo __( 'Não cadastrado' );
-      else
-         echo '<p>'. $responsavel;  '</p>';
+        echo '<p>'.the_modified_author();'</p>';
     break;
   } 
 }

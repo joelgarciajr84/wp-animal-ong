@@ -55,6 +55,7 @@ function animais_dados() {
     'side'
   );
 }
+
 function animal($animal) {
 ?>
   <p>
@@ -62,16 +63,125 @@ function animal($animal) {
     <br />
     <input  type="date" class="widefat" id="data_resgate" name="data_resgate" value="<?php echo get_post_meta( $animal->ID, 'data_resgate', true ); ?>" />
   </p>
-  <p>
-    <label  for="local_resgate">Local do Resgate:</label>
+
+<?php  
+
+$resgatantelancamento = get_post_meta( $animal->ID, 'resgatante', true );
+
+$args = array(
+  'numberposts' => -1,
+  'post_type' => 'apoiador',
+  'suppress_filters' => false, 
+  'tax_query' => array(
+  array(
+    'taxonomy' => 'tax_tipo_apoiador',
+    'field' => 'slug', 
+    'terms' => 'resgate'
+    )));
+$resgatantes = get_posts($args);
+
+echo '<strong>Resgatante</strong>';
+
+echo '<select class="widefat" name="resgatante" id="resgatante">';
+
+echo '<option value="">Selecione o Resgatante:</option>';
+
+
+foreach ($resgatantes as $resgatante) {
+?>
+<option value="<?php echo $resgatante->ID?>" <?php if ($resgatantelancamento == $resgatante->ID ){echo 'SELECTED';}?>> <?php echo $resgatante->post_title?></option>
+<?php 
+}
+
+echo '</select>';
+}
+
+#Metabox Informações do Local do Resgate
+
+add_action( 'add_meta_boxes', 'local_resgate_dados' );
+
+function local_resgate_dados() {
+  add_meta_box(
+    'local_resgate_id',
+    __('Local do Resgate','wpanimal'),
+    'animal_resgate',
+    'animal',
+    'normal'
+  );
+}
+function animal_resgate($animal) {
+
+?>
+<p>
+  <label  for="rua">Rua:</label>
+  <br />
+  <input  type="text" class="widefat" name="rua" value="<?php echo get_post_meta( $animal->ID, 'rua', true ); ?>" />
+</p>
+<p>
+  <label  for="nr">Número:</label>
+  <br />
+  <input  type="text" name="nr" value="<?php echo get_post_meta( $animal->ID, 'nr', true ); ?>" />
+</p>
+<p>
+  <label  for="cpl">Complemento:</label>
+  <br />
+  <input  type="text" class="widefat" name="cpl" value="<?php echo get_post_meta( $animal->ID, 'cpl', true ); ?>" />
+</p>
+<p>
+  <label  for="bairro">Bairro:</label>
+  <br />
+  <input  type="text" class="widefat" name="bairro" value="<?php echo get_post_meta( $animal->ID, 'bairro', true ); ?>" />
+</p>
+<p>
+  <label  for="cidade">Cidade:</label>
+  <br />
+  <input  type="text" class="widefat" name="cidade" value="<?php echo get_post_meta( $animal->ID, 'cidade', true ); ?>" />
+</p>
+<p>
+  <label for="est"> Estado: </label>
     <br />
-    <input  type="text" class="widefat" name="local_resgate" value="<?php echo get_post_meta( $animal->ID, 'local_resgate', true ); ?>" />
-  </p>
-  <p>
-    <label  for="responsavel">Responsavel:</label>
-    <br />
-    <input  type="text" class="widefat" name="responsavel" value="<?php echo get_post_meta( $animal->ID, 'responsavel', true ); ?>" />
-  </p>
+<select name="est"> 
+<?php
+$valor = get_post_meta($animal->ID, 'est', true );
+$values = array(
+  ""=>"Escolha o Estado",
+  "AC"=>"Acre",
+  "AL"=>"Alagoas",
+  "AM"=>"Amazonas",
+  "AP"=>"Amapá",
+  "BA"=>"Bahia",
+  "CE"=>"Ceará",
+  "DF"=>"Distrito Federal",
+  "ES"=>"Espírito Santo",
+  "GO"=>"Goiás",
+  "MA"=>"Maranhão",
+  "MT"=>"Mato Grosso",
+  "MS"=>"Mato Grosso do Sul",
+  "MG"=>"Minas Gerais",
+  "PA"=>"Pará",
+  "PB"=>"Paraíba",
+  "PR"=>"Paraná",
+  "PE"=>"Pernambuco",
+  "PI"=>"Piauí",
+  "RJ"=>"Rio de Janeiro",
+  "RN"=>"Rio Grande do Norte",
+  "RO"=>"Rondônia",
+  "RS"=>"Rio Grande do Sul",
+  "RR"=>"Roraima",
+  "SC"=>"Santa Catarina",
+  "SE"=>"Sergipe",
+  "SP"=>"São Paulo",
+  "TO"=>"Tocantins"
+  );
+
+foreach ($values as $val) {
+  ?>
+  <option value="<?php echo $val?>" <?php if ($valor==$val ){echo 'SELECTED';}?>> <?php echo $val?></option>
+  <?php
+}
+?>
+</select> 
+</p>
 <?php
 }
 add_action( 'save_post', 'salva_metas_animais', 10, 2 );
@@ -85,8 +195,13 @@ function salva_metas_animais( $animal_id, $animal ) {
     if(!defined('DOING_AJAX')) {
 
       update_post_meta( $animal_id, 'data_resgate', strip_tags( $_POST['data_resgate'] ) );
-      update_post_meta( $animal_id, 'local_resgate', strip_tags( $_POST['local_resgate'] ) );
-      update_post_meta( $animal_id, 'responsavel', strip_tags( $_POST['responsavel'] ) );
+      update_post_meta( $animal_id, 'rua', strip_tags( $_POST['rua'] ) );
+      update_post_meta( $animal_id, 'nr', strip_tags( $_POST['nr'] ) );
+      update_post_meta( $animal_id, 'cpl', strip_tags( $_POST['cpl'] ) );
+      update_post_meta( $animal_id, 'bairro', strip_tags( $_POST['bairro'] ) );
+      update_post_meta( $animal_id, 'cidade', strip_tags( $_POST['cidade'] ) );
+      update_post_meta( $animal_id, 'est', strip_tags( $_POST['est'] ) );
+      update_post_meta( $animal_id, 'resgatante', strip_tags( $_POST['resgatante'] ) );
      }
   }
   return true;
@@ -100,7 +215,7 @@ $columns = array(
   'cb' => '<input type="checkbox" />',
   'title' => __( 'Animal' ),
   'data_resgate' => __('Data do Resgate'),
-  'responsavel' => __('Responsavel'),
+  'resgatante' => __('Resgatante'),
   'thumbnail' => __('Foto')
 );
 
@@ -125,17 +240,18 @@ function cria_manage_animal_columns( $column, $post_id ) {
       echo "<strong>". date("d/m/Y", strtotime($dataresgate))."</strong>"; 
     break;
 
-    case 'responsavel' :
+    case 'resgatante' :
 
-      $responsavel = get_post_meta( $post_id, 'responsavel', true );
+      $resgatante = get_post_meta( $post_id, 'resgatante', true );
 
-      if ( empty( $responsavel ) )
+      if ( empty( $resgatante ) )
 
       echo "<strong>".__( 'Não cadastrado' ) ."</strong>";
 
       else
-      
-      echo "<strong>$responsavel</strong>"; 
+      $resgatante = get_post($resgatante);
+
+      echo "<strong>$resgatante->post_title</strong>"; 
      break;
      
     case 'thumbnail' :

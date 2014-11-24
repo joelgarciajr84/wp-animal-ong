@@ -109,19 +109,7 @@ function lancamentocaixa($lancamentocaixa) {
     <p>R$ <input style="width: 90%; color: blue; font-size: 14px;" type="text" name="valor_lancamento" onKeyUp="moeda(this)" value="<?php echo get_post_meta( $lancamentocaixa->ID, 'valor_lancamento', true ); ?>" /></p>
   </p>
 <hr>
-<?php 
-
-    $usuario = wp_get_current_user();
-
-    $user = $usuario->user_login;
-
-   ?>
-    <label style="height:2px;"><strong style="font-size: 14px;">Alterado por:</strong></label>
-    <br />
-    <p><input style="width: 100%; color: blue; font-size: 14px;" type="text" name="usuario" disabled value="<?php echo $user; ?>" /></p>
-  </p>
 <?php
-    
   $tipos = array("Entrada","Saida");
 
   foreach ($tipos as $tipo) {
@@ -149,8 +137,6 @@ function salva_metas_lancamentocaixa( $lancamentocaixa_id, $lancamentocaixa ) {
       update_post_meta( $lancamentocaixa_id, 'valor_lancamento', $_POST['valor_lancamento']);
       update_post_meta( $lancamentocaixa_id, 'caixa_lancamento', strip_tags( $_POST['caixa_lancamento'] ) );
       update_post_meta( $lancamentocaixa_id, 'tipo_lancamento', strip_tags( $_POST['tipo_lancamento'] ) );
-      update_post_meta( $lancamentocaixa_id, 'usuario', strip_tags( $_POST['usuario'] ) );
-
 
       $caixalancamento = $_POST['caixa_lancamento'];
       $valordolancamento = $_POST['valor_lancamento'];
@@ -248,12 +234,7 @@ function cria_manage_lancamentocaixa_columns( $column, $post_id ) {
 
      case 'usuario' :
 
-     $usuario = get_post_meta( $lancamentocaixa_id, 'usuario', true );
-
-      if ( empty( $usuario ) )
-        echo __( 'Não cadastrado' );
-      else
-         echo '<strong>'. $usuario;  '</strong>';
+        echo '<strong>'. the_modified_author();  '</strong>';
     break;
   } 
 }

@@ -39,7 +39,7 @@ add_action( 'admin_init', 'adiciona_tipos_apoiadores' );
 
 function adiciona_tipos_apoiadores() {
 
-    $tipos = array("Associado", "Adotante", "Lar");
+    $tipos = array("Associado", "Adotante", "Lar", "Resgate");
 
     foreach ($tipos as $tipo) {
       

@@ -129,12 +129,6 @@ function aplicamed($aplicamed) {
     <br />
     <p><input  type="text" class="widefat"  name="quantidade" value="<?php echo get_post_meta( $aplicamed->ID, 'quantidade', true ); ?>" /></p>
   </p>
-  <p>
-  <?php $usuario = wp_get_current_user(); ?>
-    <strong><label  for="usuario">Usuario:</label></strong>
-    <br />
-    <p><input  type="text" class="widefat"  name="usuario" value="<?php echo $usuario->user_login ;?>" /></p>
-  </p>
 <?php
 }
 add_action( 'save_post', 'salva_metas_aplicamed', 10, 2 );
@@ -153,7 +147,6 @@ function salva_metas_aplicamed( $aplicamed_id, $aplicamed ) {
       update_post_meta( $aplicamed_id, 'animal_lancamento', strip_tags( $_POST['animal_lancamento'] ) );
 
       update_post_meta( $aplicamed_id, 'quantidade', strip_tags( $_POST['quantidade'] ) );
-      update_post_meta( $aplicamed_id, 'usuario', strip_tags( $_POST['usuario'] ) );
 
       $medicamentolancamento = get_post_meta( $aplicamed->ID, 'medicamento_lancamento', true );
 
@@ -239,14 +232,7 @@ function cria_manage_aplicamed_columns( $column, $post_id ) {
     break;
 
      case 'usuario' :
-
-     $usuario = get_post_meta( $post_id, 'usuario', true );
-
-      if ( empty( $usuario ) )
-
-        echo __( 'Não cadastrado' );
-      else
-         echo '<p>'. $usuario;  '</p>';
+         echo '<p>'.the_modified_author();'</p>';
     break;
   } 
 }
