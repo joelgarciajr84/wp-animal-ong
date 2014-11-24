@@ -11,6 +11,7 @@ require_once dirname( __FILE__ ) . '/cpt-lancamento-caixa.php';
 require_once dirname( __FILE__ ) . '/cpt-animais.php';
 require_once dirname( __FILE__ ) . '/cpt-veterinarios.php';
 //require_once dirname( __FILE__ ) . '/cpt-lares-adocao.php';
+require_once dirname( __FILE__ ) . '/cpt-adocoes.php';
 
 
 #Invoca Taxonomias

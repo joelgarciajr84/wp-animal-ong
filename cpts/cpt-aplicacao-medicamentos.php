@@ -28,7 +28,7 @@ function register_cpt_aplicacao_medicamentos() {
     'taxonomies' => array(''),
     'public' => true,
     'show_ui' => true,
-    'show_in_menu' => 'menu-farmacia',
+    'show_in_menu' => 'menu-saude',
     'menu_position' => 5,
     'show_in_nav_menus' => true,
     'publicly_queryable' => true,

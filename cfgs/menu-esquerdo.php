@@ -53,28 +53,19 @@ function Menu_WP_Animal_ONG (){
 			'103'
 		);
 		add_menu_page( 
-			'Veterinarios',
-			'Veterinarios',
+			'Saude',
+			'Saude',
 			'6',
-			'menu-veterinarios',
-			'',
-			plugins_url('wp-animal-ong/images/veterinarios.png'),
-			'104'
-		);
-		add_menu_page( 
-			'Farmacia',
-			'Farmacia',
-			'6',
-			'menu-farmacia',
+			'menu-saude',
 			'',
 			plugins_url('wp-animal-ong/images/farmacia.png'),
 			'105'
 		);
 		add_menu_page( 
-			'Lares',
-			'Lares',
+			'Adoções',
+			'Adoções',
 			'6',
-			'menu-lares',
+			'menu-adocoes',
 			'',
 			plugins_url('wp-animal-ong/images/lares.png'),
 			'106'
@@ -98,9 +89,8 @@ function custom_menu_order($menu_ord) {
 			'separator1',
 
 			'menu-animais',
-			'menu-farmacia',
-			'menu-veterinarios',
-			'menu-lares',
+			'menu-saude',
+			'menu-adocoes',
 		
 			//'separator-last', Ultimo Separador
 			#'edit.php', // Posts normais
