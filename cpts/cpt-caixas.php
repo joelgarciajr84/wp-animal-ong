@@ -79,7 +79,7 @@ function caixas($caixas) {
   <p align="center">
     <strong style="font-size: 16px;">:: Responsavel :: </strong>
     <br />
-    <input style="width: 100%; color:green; height: 40px;font-size: 16px;"  type="text" name="responsavel" value="<?php echo get_post_meta( $caixas->ID, 'responsavel', true ); ?>" />
+    <input required style="width: 100%; color:green; height: 40px;font-size: 16px;"  type="text" name="responsavel" value="<?php echo get_post_meta( $caixas->ID, 'responsavel', true ); ?>" />
   </p>
 <?php
 }

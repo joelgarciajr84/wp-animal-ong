@@ -93,7 +93,7 @@ function entmed($entmed) {
   <p>
     <strong><label  for="quantidade">Quantidade:</label></strong>
     <br />
-    <p><input  type="text" class="widefat"  name="quantidade" value="<?php echo get_post_meta( $entmed->ID, 'quantidade', true ); ?>" /></p>
+    <p><input required  type="text" class="widefat"  name="quantidade" value="<?php echo get_post_meta( $entmed->ID, 'quantidade', true ); ?>" /></p>
   </p>
 <?php
 }

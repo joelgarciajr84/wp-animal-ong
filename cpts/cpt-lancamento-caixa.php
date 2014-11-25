@@ -106,7 +106,7 @@ function lancamentocaixa($lancamentocaixa) {
 ?>
    <label style="height:2px;"><strong style="font-size: 14px;">Valor:</strong></label>
 <br>
-    <p>R$ <input style="width: 90%; color: blue; font-size: 14px;" type="text" name="valor_lancamento" onKeyUp="moeda(this)" value="<?php echo get_post_meta( $lancamentocaixa->ID, 'valor_lancamento', true ); ?>" /></p>
+    <p>R$ <input required style="width: 90%; color: blue; font-size: 14px;" type="text" name="valor_lancamento" onKeyUp="moeda(this)" value="<?php echo get_post_meta( $lancamentocaixa->ID, 'valor_lancamento', true ); ?>" /></p>
   </p>
 <hr>
 <?php
@@ -114,7 +114,7 @@ function lancamentocaixa($lancamentocaixa) {
 
   foreach ($tipos as $tipo) {
   ?>
-    <input type="radio" name="tipo_lancamento" value="<?php echo $tipo ?>"<?php if ($tipolancamento == $tipo) {echo 'CHECKED';} ?>> <?php echo $tipo ?>
+    <input required type="radio" name="tipo_lancamento" value="<?php echo $tipo ?>"<?php if ($tipolancamento == $tipo) {echo 'CHECKED';} ?>> <?php echo $tipo ?>
   <?php
   }
 }

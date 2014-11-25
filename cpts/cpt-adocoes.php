@@ -120,7 +120,7 @@ function adocao($adocao) {
   <p>
     <strong><label  for="data_adocao">Data Adocao:</label></strong>
     <br />
-    <p><input  type="date" class="widefat"  name="data_adocao" value="<?php echo get_post_meta( $adocao->ID, 'data_adocao', true ); ?>" /></p>
+    <p><input required  type="date" class="widefat"  name="data_adocao" value="<?php echo get_post_meta( $adocao->ID, 'data_adocao', true ); ?>" /></p>
   </p>
   <p>
     <strong><label  for="data_final">Data Final Adocao:</label></strong>

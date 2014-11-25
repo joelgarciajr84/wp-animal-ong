@@ -152,11 +152,11 @@ function apoiador($apoiador) {
 <p>
 <strong>Rua:</strong>
 
-  <input class="rua" type="text" name="rua" value="<?php echo get_post_meta( $apoiador->ID, 'rua', true ); ?>" />
+  <input required class="rua" type="text" name="rua" value="<?php echo get_post_meta( $apoiador->ID, 'rua', true ); ?>" />
 
   <strong>Numero: </strong>
 
-  <input  type="text" class="numero" name="nr" value="<?php echo get_post_meta( $apoiador->ID, 'nr', true ); ?>" />
+  <input required  type="text" class="numero" name="nr" value="<?php echo get_post_meta( $apoiador->ID, 'nr', true ); ?>" />
 
  <strong>Complemento: </strong>
 
@@ -165,11 +165,11 @@ function apoiador($apoiador) {
 <p>
 <strong>Bairro: </strong>
 
-  <input  type="text" class="bairro" name="bairro" value="<?php echo get_post_meta( $apoiador->ID, 'bairro', true ); ?>" />
+  <input required  type="text" class="bairro" name="bairro" value="<?php echo get_post_meta( $apoiador->ID, 'bairro', true ); ?>" />
 </p>
   <strong>Cidade: </strong>
   
-  <input type="text" name="cidade" class="cidade" value="<?php echo get_post_meta( $apoiador->ID, 'cidade', true ); ?>" />
+  <input required type="text" name="cidade" class="cidade" value="<?php echo get_post_meta( $apoiador->ID, 'cidade', true ); ?>" />
 
   <strong>Estado: </strong>
 
@@ -218,11 +218,11 @@ foreach ($values as $val) {
 <p>
  <strong>Telefone: </strong>
   
-  <input  type="tel" id="tel" name="fone" class="telefone" value="<?php echo get_post_meta( $apoiador->ID, 'fone', true ); ?>" /> 
+  <input required  type="tel" id="tel" name="fone" class="telefone" value="<?php echo get_post_meta( $apoiador->ID, 'fone', true ); ?>" /> 
 
   <strong>Celular: </strong>
 
-  <input  type="tel" id="telad" name="celular" class="celular" value="<?php echo get_post_meta( $apoiador->ID, 'celular', true ); ?>" />
+  <input   type="tel" id="telad" name="celular" class="celular" value="<?php echo get_post_meta( $apoiador->ID, 'celular', true ); ?>" />
 <strong>Sexo: </strong>
 
 <select class="sexo" name="sexo"> 

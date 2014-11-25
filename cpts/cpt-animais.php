@@ -61,7 +61,7 @@ function animal($animal) {
   <p>
     <label  for="data_resgate">Data do Resgate:</label>
     <br />
-    <input  type="date" class="widefat" id="data_resgate" name="data_resgate" value="<?php echo get_post_meta( $animal->ID, 'data_resgate', true ); ?>" />
+    <input required  type="date" class="widefat" id="data_resgate" name="data_resgate" value="<?php echo get_post_meta( $animal->ID, 'data_resgate', true ); ?>" />
   </p>
 
 <?php  
@@ -130,12 +130,12 @@ function animal_resgate($animal) {
 <p>
   <label  for="bairro">Bairro:</label>
   <br />
-  <input  type="text" class="widefat" name="bairro" value="<?php echo get_post_meta( $animal->ID, 'bairro', true ); ?>" />
+  <input required  type="text" class="widefat" name="bairro" value="<?php echo get_post_meta( $animal->ID, 'bairro', true ); ?>" />
 </p>
 <p>
   <label  for="cidade">Cidade:</label>
   <br />
-  <input  type="text" class="widefat" name="cidade" value="<?php echo get_post_meta( $animal->ID, 'cidade', true ); ?>" />
+  <input required  type="text" class="widefat" name="cidade" value="<?php echo get_post_meta( $animal->ID, 'cidade', true ); ?>" />
 </p>
 <p>
   <label for="est"> Estado: </label>
