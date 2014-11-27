@@ -88,7 +88,7 @@ function lancamentocaixa($lancamentocaixa) {
   $caixaescolhido = get_posts( $args );
 
 
-  echo '  <label style="height:2px;"><strong style="font-size: 14px;">Caixa:</strong></label>';
+  echo '<label style="height:2px;"><strong style="font-size: 14px;">Caixa:</strong></label>';
 
   echo '<br><br>';
 
