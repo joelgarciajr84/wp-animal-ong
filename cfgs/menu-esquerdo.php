@@ -6,15 +6,19 @@ add_action( 'admin_menu', 'remove_wp_menus' );
 
 function remove_wp_menus() {
 
-	remove_menu_page('edit.php');
-	remove_menu_page('edit.php?post_type=page');
-	remove_menu_page('plugins.php');
-	remove_menu_page('tools.php');
-	remove_menu_page('update-core.php');
-	remove_menu_page('upload.php');
-	remove_menu_page('edit-comments.php');
-	remove_menu_page('themes.php');
-	remove_menu_page('options-general.php');
+	if ( !current_user_can('moderate_comments') ) {
+
+
+		remove_menu_page('edit.php');
+		remove_menu_page('edit.php?post_type=page');
+		remove_menu_page('plugins.php');
+		remove_menu_page('tools.php');
+		remove_menu_page('update-core.php');
+		remove_menu_page('upload.php');
+		remove_menu_page('edit-comments.php');
+		remove_menu_page('themes.php');
+		remove_menu_page('options-general.php');
+	}
 }
 
 #Adiciona os menus (` chave `)
@@ -25,7 +29,7 @@ function Menu_WP_Animal_ONG (){
 
 	if ( current_user_can('moderate_comments') ) {
 
-		add_menu_page( 
+		add_menu_page(
 			'Apoiadores',
 			'Apoiadores',
 			'6',
@@ -34,7 +38,7 @@ function Menu_WP_Animal_ONG (){
 			plugins_url('wp-animal-ong/images/associados.png'),
 			'101'
 		);
-		add_menu_page( 
+		add_menu_page(
 			'Financeiro',
 			'Financeiro',
 			'6',
@@ -43,7 +47,7 @@ function Menu_WP_Animal_ONG (){
 			plugins_url('wp-animal-ong/images/financeiro.png'),
 			'102'
 		);
-		add_menu_page( 
+		add_menu_page(
 			'Animais',
 			'Animais',
 			'6',
@@ -52,7 +56,7 @@ function Menu_WP_Animal_ONG (){
 			plugins_url('wp-animal-ong/images/animais.png'),
 			'103'
 		);
-		add_menu_page( 
+		add_menu_page(
 			'Saude',
 			'Saude',
 			'6',
@@ -61,7 +65,7 @@ function Menu_WP_Animal_ONG (){
 			plugins_url('wp-animal-ong/images/farmacia.png'),
 			'105'
 		);
-		add_menu_page( 
+		add_menu_page(
 			'Adoções',
 			'Adoções',
 			'6',
@@ -70,7 +74,7 @@ function Menu_WP_Animal_ONG (){
 			plugins_url('wp-animal-ong/images/lares.png'),
 			'106'
 		);
-		add_menu_page( 
+		add_menu_page(
 			'Relatorios',
 			'Relatorios',
 			'6',
