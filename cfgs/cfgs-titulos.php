@@ -97,4 +97,3 @@ function change_image_box(){
         'high'
     ); 
 }
-?>

@@ -201,4 +201,3 @@ function cria_manage_medicamentos_columns( $column, $post_id ) {
     break;
   } 
 }
-?>

@@ -18,4 +18,3 @@ require_once dirname( __FILE__ ) . '/cpt-adocoes.php';
 #Invoca Taxonomias
 
 require_once dirname(__FILE__) . '/taxonomias/taxonomias.php';
-?>

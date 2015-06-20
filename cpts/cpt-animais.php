@@ -266,4 +266,3 @@ function cria_manage_animal_columns( $column, $post_id ) {
     break;
   } 
 }
-?>

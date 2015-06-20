@@ -63,13 +63,14 @@ function caixas($caixas) {
   <p align="center">
     <strong style="font-size: 16px;">:: Saldo Atual :: </strong>
     <br>
-    <?php 
-      
-      if ($saldoatual >= 0) {
+    <?php
+
+      if (empty($saldoatual)) {
+      	$saldoatual = floatval(0);
 
         echo '<strong style="font-size: 16px;">R$</strong><input style="width: 89%; color:green; height: 40px;font-size: 16px;" type="text" name="saldo" disabled value=' . money_format('%n', $saldoatual);'/>';
 
-      }elseif($saldoatual<0){
+      }else{
 
         echo '<strong style="font-size: 16px;">R$</strong><input style="width: 89%; color:red; height: 40px;font-size: 16px;" type="text" name="saldo" disabled value=' . money_format('%n', $saldoatual);'/>';
       }
@@ -148,4 +149,3 @@ function cria_manage_caixas_columns( $column, $post_id ) {
       break;
     } 
   }
-?>

@@ -236,4 +236,3 @@ function cria_manage_adocao_columns( $column, $post_id ) {
     break;
   } 
 }
-?>

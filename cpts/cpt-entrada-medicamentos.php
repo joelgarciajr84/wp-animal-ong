@@ -187,4 +187,3 @@ function cria_manage_entmed_columns( $column, $post_id ) {
     break;
   } 
 }
-?>

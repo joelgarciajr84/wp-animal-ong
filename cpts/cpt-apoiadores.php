@@ -364,4 +364,3 @@ function cria_manage_apoiador_columns( $column, $post_id ) {
     break;
   } 
 }
-?>

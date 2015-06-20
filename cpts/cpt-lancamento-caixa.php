@@ -238,4 +238,3 @@ function cria_manage_lancamentocaixa_columns( $column, $post_id ) {
     break;
   } 
 }
-?>
