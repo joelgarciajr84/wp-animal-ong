@@ -138,10 +138,10 @@ function salva_metas_lancamentocaixa( $lancamentocaixa_id, $lancamentocaixa ) {
       update_post_meta( $lancamentocaixa_id, 'caixa_lancamento', strip_tags( $_POST['caixa_lancamento'] ) );
       update_post_meta( $lancamentocaixa_id, 'tipo_lancamento', strip_tags( $_POST['tipo_lancamento'] ) );
 
-      $caixalancamento = $_POST['caixa_lancamento'];
-      $valordolancamento = $_POST['valor_lancamento'];
+      $caixalancamento = floatval($_POST['caixa_lancamento']);
+      $valordolancamento = floatval($_POST['valor_lancamento']);
 
-      $saldoatual = get_post_meta($caixalancamento, "saldo", true);
+      $saldoatual = floatval(get_post_meta($caixalancamento, "saldo", true));
 
       $saldoatual = money_format('%n', $saldoatual);
 
@@ -159,7 +159,7 @@ function salva_metas_lancamentocaixa( $lancamentocaixa_id, $lancamentocaixa ) {
       }
 
       #Atualiza saldo do Caixa baseado no valor da movimentacao
-      
+
       update_post_meta($caixalancamento, 'saldo', money_format('%n', $novosaldo));
     }
   }
