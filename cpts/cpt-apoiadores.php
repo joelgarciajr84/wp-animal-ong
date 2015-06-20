@@ -54,9 +54,7 @@ function apoiador_dados() {
         'normal'
     );
 }
-function apoiador($apoiador) {
-
-?>
+function apoiador($apoiador) {?>
 <style>
 .cadastro{
   width: 100%;
@@ -230,8 +228,7 @@ foreach ($values as $val) {
 $valor = get_post_meta($apoiador->ID, 'sexo', true );
 $values = array(""=> "Escolha o Sexo","M"=> "Masculino","F"=> "Feminino");
 
-foreach ($values as $val) {
-  ?>
+foreach ($values as $val) {?>
   <option value="<?php echo $val?>" <?php if ($valor==$val ){echo 'SELECTED';}?>> <?php echo $val?></option>
   <?php
 }
@@ -301,7 +298,7 @@ function cria_edit_apoiador_columns( $columns ) {
 
 $columns = array(
   'cb' => '<input type="checkbox" />',
-  'title' => __( 'Cliente' ),
+  'title' => __( 'Apoiador' ),
   'Cidade' => __('Cidade'),
   'Bairro' => __('Bairro'),
   'Telefone' => __('Telefone'),
@@ -362,5 +359,5 @@ function cria_manage_apoiador_columns( $column, $post_id ) {
 
       echo '<em>Sem Miniatura</em>';
     break;
-  } 
+  }
 }

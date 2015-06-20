@@ -6,19 +6,21 @@ add_action( 'admin_menu', 'remove_wp_menus' );
 
 function remove_wp_menus() {
 
-	if ( !current_user_can('moderate_comments') ) {
+	remove_menu_page('edit.php');
+	remove_menu_page('edit.php?post_type=page');
+	remove_menu_page('plugins.php');
+	remove_menu_page('tools.php');
+	remove_menu_page('update-core.php');
+	remove_menu_page('upload.php');
 
+	if ( !current_user_can('administrator') ) {
 
-		remove_menu_page('edit.php');
-		remove_menu_page('edit.php?post_type=page');
-		remove_menu_page('plugins.php');
-		remove_menu_page('tools.php');
-		remove_menu_page('update-core.php');
-		remove_menu_page('upload.php');
 		remove_menu_page('edit-comments.php');
-		remove_menu_page('themes.php');
-		remove_menu_page('options-general.php');
 	}
+
+	remove_menu_page('themes.php');
+	remove_menu_page('options-general.php');
+
 }
 
 #Adiciona os menus (` chave `)
@@ -38,15 +40,17 @@ function Menu_WP_Animal_ONG (){
 			plugins_url('wp-animal-ong/images/associados.png'),
 			'101'
 		);
-		add_menu_page(
-			'Financeiro',
-			'Financeiro',
-			'6',
-			'menu-financeiro',
-			'',
-			plugins_url('wp-animal-ong/images/financeiro.png'),
-			'102'
-		);
+		if( current_user_can( 'administrator' ) ){
+			add_menu_page(
+				'Financeiro',
+				'Financeiro',
+				'6',
+				'menu-financeiro',
+				'',
+				plugins_url('wp-animal-ong/images/financeiro.png'),
+				'102'
+			);
+		}	
 		add_menu_page(
 			'Animais',
 			'Animais',
