@@ -15,7 +15,7 @@ require_once dirname(__FILE__) . '/cpts/cpts.php';
 require_once dirname(__FILE__) . '/cfgs/cfgs.php';
 
 #Importacao dos javascripts necessarios
-
+var_dump("teste");
 add_action('admin_enqueue_scripts', 'jsnecessarios');
 function jsnecessarios() {
 
