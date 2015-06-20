@@ -58,22 +58,31 @@ function caixas($caixas) {
 
   setlocale(LC_MONETARY, 'pt_BR');
 
-  $saldoatual = get_post_meta( $caixas->ID, 'saldo', true );
+  $saldoatual = floatval(get_post_meta( $caixas->ID, 'saldo', true )) ;
 ?>
   <p align="center">
     <strong style="font-size: 16px;">:: Saldo Atual :: </strong>
     <br>
     <?php
 
-      if (empty($saldoatual)) {
-      	$saldoatual = floatval(0);
+switch ($saldoatual) {
+	case (empty($saldoatual)):
 
-        echo '<strong style="font-size: 16px;">R$</strong><input style="width: 89%; color:green; height: 40px;font-size: 16px;" type="text" name="saldo" disabled value=' . money_format('%n', $saldoatual);'/>';
+		$saldoatual = floatval(0);
 
-      }else{
+		echo '<strong style="font-size: 16px;">R$</strong><input style="width: 89%; color:green; height: 40px;font-size: 16px;" type="text" name="saldo" disabled value=' . $saldoatual;'/>';
+	break;
 
-        echo '<strong style="font-size: 16px;">R$</strong><input style="width: 89%; color:red; height: 40px;font-size: 16px;" type="text" name="saldo" disabled value=' . money_format('%n', $saldoatual);'/>';
-      }
+	case ($saldoatual< floatval(0)):
+
+
+		echo '<strong style="font-size: 16px;">R$</strong><input style="width: 89%; color:green; height: 40px;font-size: 16px;" type="text" name="saldo" disabled value=' . $saldoatual;'/>';
+	break;
+	
+	default:
+		echo '<strong style="font-size: 16px;">R$</strong><input style="width: 89%; color:green; height: 40px;font-size: 16px;" type="text" name="saldo" disabled value=' . $saldoatual;'/>';
+		break;
+}
      ?>
    
   </p>
