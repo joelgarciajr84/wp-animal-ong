@@ -1,4 +1,6 @@
-# WP Animal ONG
+
+=============
+# WP Animal ONG [![Build Status](https://travis-ci.org/joelgarciajr84/wp-animal-ong.svg?branch=master)](https://travis-ci.org/joelgarciajr84/) [![Code Climate](https://d3s6mut3hikguw.cloudfront.net/github/joelgarciajr84/wp-animal-ong/badges/coverage.svg?style=flat)](https://codeclimate.com/github/joelgarciajr84/wp-animal-ong)
 
 WPAnimal ONG é um plugin para WordPress que visa auxiliar na gestão de ONG's que resgatam e cuidam de animais.
 
