@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 #Custom Post Type - Cadastro de Caixas
 
@@ -6,39 +6,50 @@ add_action( 'init', 'register_cpt_caixas' );
 
 function register_cpt_caixas() {
 
-  $labels = array( 
-    'name' => __('Caixa','wpanimal'),
-    'singular_name' => __('Caixa','wpanimal'),
-    'add_new' => __('Adicionar Caixa','wpanimal'),
-    'add_new_item' => __('Adicionar Caixa','wpanimal'),
-    'edit_item' => __('Editar Caixa','wpanimal'),
-    'new_item' => __('Novo Caixa','wpanimal'),
-    'view_item' => __('Ver Caixa','wpanimal'),
-    'search_items' => __('Pesquisar','wpanimal'),
-    'not_found' => __('Nada Aqui','wpanimal'),
-    'not_found_in_trash' => __('Nada Aqui','wpanimal'),
-    'parent_item_colon' => __('Caixas','wpanimal'),
-    'menu_name' => __('Caixas','wpanimal'),
-  );
-  $args = array( 
-    'labels' => $labels,
-    'hierarchical' => true,
-    'description' => 'Lida com Caixas',
-    'supports' => array('title', 'editor'),
-    'taxonomies' => array(''),
-    'public' => true,
-    'show_ui' => true,
-    'show_in_menu' => 'menu-financeiro',
-    'menu_position' => 5,
-    'show_in_nav_menus' => true,
-    'publicly_queryable' => true,
-    'exclude_from_search' => false,
-    'has_archive' => true,
-    'query_var' => true,
-    'can_export' => true,
-    'rewrite' => true,
-    'capability_type' => 'post'
-  );
+	$labels = array(
+		'name' => __('Caixas','wpanimal'),
+		'singular_name' => __('Caixas','wpanimal'),
+		'add_new' => __('Adicionar Caixa','wpanimal'),
+		'add_new_item' => __('Adicionar Caixa','wpanimal'),
+		'edit_item' => __('Editar Caixa','wpanimal'),
+		'new_item' => __('Novo Caixa','wpanimal'),
+		'view_item' => __('Ver Caixa','wpanimal'),
+		'search_items' => __('Pesquisar','wpanimal'),
+		'not_found' => __('Nada Aqui','wpanimal'),
+		'not_found_in_trash' => __('Nada Aqui','wpanimal'),
+		'parent_item_colon' => __('Caixas','wpanimal'),
+		'menu_name' => __('Caixas','wpanimal'),
+	);
+	$args = array(
+		'labels' => $labels,
+		'hierarchical' => true,
+		'description' => 'Lida com Caixas',
+		'supports' => array('title', 'editor'),
+		'taxonomies' => array(''),
+		'public' => true,
+		'show_ui' => true,
+		'show_in_menu' => 'menu-financeiro',
+		'menu_position' => 5,
+		'show_in_nav_menus' => true,
+		'publicly_queryable' => true,
+		'exclude_from_search' => false,
+		'has_archive' => true,
+		'query_var' => true,
+		'can_export' => true,
+		'rewrite' => true,
+		'capability_type' => 'caixas',
+		'capabilities' => array(
+		'publish_posts' => 'publish_caixas',
+		'edit_posts' => 'edit_caixas',
+		'edit_others_posts' => 'edit_others_caixas',
+		'delete_posts' => 'delete_caixas',
+		'delete_others_posts' => 'delete_others_caixas',
+		'read_private_posts' => 'read_private_caixas',
+		'edit_post' => 'edit_caixas',
+		'delete_post' => 'delete_caixas',
+		'read_post' => 'read_caixas',
+		),
+	);
   register_post_type( 'caixas', $args );
 }
 #Metabox Informações dos caixas
@@ -55,10 +66,9 @@ function caixas_dados() {
   );
 }
 function caixas($caixas) {
+	setlocale(LC_MONETARY, 'pt_BR');
 
-  setlocale(LC_MONETARY, 'pt_BR');
-
-  $saldoatual = floatval(get_post_meta( $caixas->ID, 'saldo', true )) ;
+  	$saldoatual = floatval(get_post_meta( $caixas->ID, 'saldo', true ));
 ?>
   <p align="center">
     <strong style="font-size: 16px;">:: Saldo Atual :: </strong>
@@ -84,7 +94,6 @@ switch ($saldoatual) {
 		break;
 }
      ?>
-   
   </p>
   <p align="center">
     <strong style="font-size: 16px;">:: Responsavel :: </strong>
@@ -102,7 +111,7 @@ function salva_metas_caixas( $caixas_id, $caixas ) {
   if ($post->post_type == 'caixas') {
 
     if(!defined('DOING_AJAX')) {
-      update_post_meta( $caixas_id, 'responsavel', strip_tags( $_POST['responsavel'] ) );      
+      update_post_meta( $caixas_id, 'responsavel', strip_tags( $_POST['responsavel'] ) );
     }
   }
   return true;

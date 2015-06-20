@@ -2,17 +2,17 @@
 
 #Invocacao de Custom Post Types
 
+if(!function_exists('wp_get_current_user')) {
+    include(ABSPATH . "wp-includes/pluggable.php"); 
+}
+
 require_once dirname( __FILE__ ) . '/cpt-apoiadores.php';
 require_once dirname( __FILE__ ) . '/cpt-medicamentos.php';
 require_once dirname( __FILE__ ) . '/cpt-entrada-medicamentos.php';
 require_once dirname( __FILE__ ) . '/cpt-aplicacao-medicamentos.php';
 
-if(!function_exists('wp_get_current_user')) {
-    include(ABSPATH . "wp-includes/pluggable.php"); 
-}
-
-if( current_user_can( 'administrator' ) ){
-
+if( current_user_can( 'edit_caixas' ) ){
+	
 	require_once dirname( __FILE__ ) . '/cpt-caixas.php';
 	require_once dirname( __FILE__ ) . '/cpt-lancamento-caixa.php';
 }

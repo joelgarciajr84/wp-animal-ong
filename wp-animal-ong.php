@@ -10,6 +10,7 @@
  */
 
 //Invocacoes Necessarias
+require_once dirname(__FILE__) . '/cfgs/permissoes.php';
 require_once dirname(__FILE__) . '/cfgs/menu-esquerdo.php';
 require_once dirname(__FILE__) . '/cpts/cpts.php';
 require_once dirname(__FILE__) . '/cfgs/cfgs.php';
@@ -36,5 +37,4 @@ function remove_dashboard_widgets() {
 	unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_secondary']);
 
 }
-
 add_action('wp_dashboard_setup', 'remove_dashboard_widgets' );

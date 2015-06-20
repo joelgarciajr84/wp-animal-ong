@@ -13,7 +13,7 @@ function remove_wp_menus() {
 	remove_menu_page('update-core.php');
 	remove_menu_page('upload.php');
 
-	if ( !current_user_can('administrator') ) {
+	if ( !current_user_can('edit_caixas') ) {
 
 		remove_menu_page('edit-comments.php');
 	}
@@ -30,31 +30,32 @@ add_action( 'admin_menu','Menu_WP_Animal_ONG' );
 function Menu_WP_Animal_ONG (){
 
 	if ( current_user_can('moderate_comments') ) {
+//add_menu_page( $page_title, $menu_title, $capability, $menu_slug, $function, $icon_url, $position );
 
 		add_menu_page(
 			'Apoiadores',
 			'Apoiadores',
-			'6',
+			'edit_posts',
 			'menu-apoiadores',
 			'',
 			plugins_url('wp-animal-ong/images/associados.png'),
 			'101'
 		);
-		if( current_user_can( 'administrator' ) ){
-			add_menu_page(
-				'Financeiro',
-				'Financeiro',
-				'6',
-				'menu-financeiro',
-				'',
-				plugins_url('wp-animal-ong/images/financeiro.png'),
-				'102'
-			);
-		}	
+		
+		add_menu_page(
+			'Financeiro',
+			'Financeiro',
+			'edit_caixas',
+			'menu-financeiro',
+			'',
+			plugins_url('wp-animal-ong/images/financeiro.png'),
+			'102'
+		);
+			
 		add_menu_page(
 			'Animais',
 			'Animais',
-			'6',
+			'edit_posts',
 			'menu-animais',
 			'',
 			plugins_url('wp-animal-ong/images/animais.png'),
@@ -63,7 +64,7 @@ function Menu_WP_Animal_ONG (){
 		add_menu_page(
 			'Saude',
 			'Saude',
-			'6',
+			'edit_posts',
 			'menu-saude',
 			'',
 			plugins_url('wp-animal-ong/images/farmacia.png'),
@@ -72,7 +73,7 @@ function Menu_WP_Animal_ONG (){
 		add_menu_page(
 			'Adoções',
 			'Adoções',
-			'6',
+			'edit_posts',
 			'menu-adocoes',
 			'',
 			plugins_url('wp-animal-ong/images/lares.png'),
@@ -81,7 +82,7 @@ function Menu_WP_Animal_ONG (){
 		add_menu_page(
 			'Relatorios',
 			'Relatorios',
-			'6',
+			'edit_posts',
 			'wp-animal-ong/relatorios/relatorios.php',
 			'',
 			plugins_url('wp-animal-ong/images/relatorios.png'),
@@ -124,5 +125,3 @@ function custom_menu_order($menu_ord) {
 			'options-general.php', // Configuracoes
 		);
 	}
-
-?>

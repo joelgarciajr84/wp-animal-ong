@@ -37,7 +37,18 @@ function register_cpt_lancamento_caixas() {
     'query_var' => true,
     'can_export' => true,
     'rewrite' => true,
-    'capability_type' => 'post'
+     'capability_type' => 'lancamentocaixa',
+    'capabilities' => array(
+		'publish_posts' => 'publish_lancamentocaixa',
+		'edit_posts' => 'edit_lancamentocaixa',
+		'edit_others_posts' => 'edit_others_lancamentocaixa',
+		'delete_posts' => 'delete_lancamentocaixa',
+		'delete_others_posts' => 'delete_others_lancamentocaixa',
+		'read_private_posts' => 'read_private_lancamentocaixa',
+		'edit_post' => 'edit_lancamentocaixa',
+		'delete_post' => 'delete_lancamentocaixa',
+		'read_post' => 'read_lancamentocaixa',
+	),
   );
   register_post_type( 'lancamentocaixa', $args );
 }
