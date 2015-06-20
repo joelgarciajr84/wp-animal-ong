@@ -9,11 +9,14 @@
  * Author URL: joel.garciajr84@gmail.com
  */
 
+register_activation_hook( __FILE__, 'setPermissions' );
+//add_action('admin_init', 'setPermissions');
 //Invocacoes Necessarias
 require_once dirname(__FILE__) . '/cfgs/permissoes.php';
 require_once dirname(__FILE__) . '/cfgs/menu-esquerdo.php';
 require_once dirname(__FILE__) . '/cpts/cpts.php';
 require_once dirname(__FILE__) . '/cfgs/cfgs.php';
+
 
 #Importacao dos javascripts necessarios
 add_action('admin_enqueue_scripts', 'jsnecessarios');

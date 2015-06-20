@@ -41,6 +41,3 @@ function setPermissions(){
 	endforeach;
 
 }
-
-register_activation_hook( __FILE__, 'setPermissions' );
-//add_action('admin_init', 'setPermissions');
