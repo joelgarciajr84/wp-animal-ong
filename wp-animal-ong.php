@@ -11,8 +11,6 @@
 
 register_activation_hook( __FILE__, 'setPermissions' );
 
-add_action('admin_init', 'setPermissions' );
-//add_action('admin_init', 'setPermissions');
 //Invocacoes Necessarias
 require_once dirname(__FILE__) . '/cfgs/permissoes.php';
 require_once dirname(__FILE__) . '/cfgs/menu-esquerdo.php';
