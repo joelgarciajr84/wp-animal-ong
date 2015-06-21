@@ -10,7 +10,13 @@ function setPermissions(){
 		'edit_others_caixas',
 		'read_private_caixas',
 		'edit_caixa',
-		'read_caixa'
+		'read_caixa',
+		'publish_lancamentocaixa',
+		'edit_lancamentocaixa',
+		'edit_others_lancamentocaixa',
+		'read_private_lancamentocaixa',
+		'edit_lancamentocaixa',
+		'read_lancamentocaixa',
 	);
 
 	$result = add_role(
