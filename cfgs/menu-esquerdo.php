@@ -29,8 +29,6 @@ add_action( 'admin_menu','Menu_WP_Animal_ONG' );
 
 function Menu_WP_Animal_ONG (){
 
-	if ( current_user_can('moderate_comments') ) {
-//add_menu_page( $page_title, $menu_title, $capability, $menu_slug, $function, $icon_url, $position );
 
 		add_menu_page(
 			'Apoiadores',
@@ -89,7 +87,7 @@ function Menu_WP_Animal_ONG (){
 			'107'
 		);
 
-	}
+	
 }
 
 #Ordem de Exibição dos Menus
@@ -99,29 +97,29 @@ add_filter('menu_order', 'custom_menu_order');
 function custom_menu_order($menu_ord) {
 	if (!$menu_ord) return true;
 
-		return array(
+	return array(
 
-			'index.php', // Dashboard
-			'menu-apoiadores',
-			'menu-financeiro',
+		'index.php', // Dashboard
+		'menu-apoiadores',
+		'menu-financeiro',
 
-			'separator1',
+		'separator1',
 
-			'menu-animais',
-			'menu-saude',
-			'menu-adocoes',
-			'menu-relatorios',
-			//'separator-last', Ultimo Separador
-			#'edit.php', // Posts normais
-			'separator2', //Segundo separador
-			'upload.php', // Manipulação de Media
-			#'link-manager.php', // Links
-			#'edit.php?post_type=page', // Páginas
-			#'edit-comments.php', // Comentários
-			'themes.php', // Aparencia
-			'plugins.php', // Plugins
-			'users.php', // Usuarios
-			'tools.php', // Ferramentas
-			'options-general.php', // Configuracoes
-		);
-	}
+		'menu-animais',
+		'menu-saude',
+		'menu-adocoes',
+		'menu-relatorios',
+		//'separator-last', Ultimo Separador
+		#'edit.php', // Posts normais
+		'separator2', //Segundo separador
+		'upload.php', // Manipulação de Media
+		#'link-manager.php', // Links
+		#'edit.php?post_type=page', // Páginas
+		#'edit-comments.php', // Comentários
+		'themes.php', // Aparencia
+		'plugins.php', // Plugins
+		'users.php', // Usuarios
+		'tools.php', // Ferramentas
+		'options-general.php', // Configuracoes
+	);
+}
