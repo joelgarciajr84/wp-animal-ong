@@ -48,127 +48,43 @@ add_action( 'add_meta_boxes', 'apoiador_dados' );
 function apoiador_dados() {
     add_meta_box(
         'apoiador_id',
-        __('Dados da Pessoa','wpanimal'),
+        __('Dados do Apoiador','wpanimal'),
         'apoiador',
         'apoiador',
-        'normal'
+        'side'
     );
 }
 function apoiador($apoiador) {?>
-<style>
-.cadastro{
-  width: 100%;
-  height: 400px;
-  position: relative;
-}
-.rua {
-  width: 30%;
-  height: 30px;
-  font-size: 16px;
-  color: #0085cf !important;
-  position: relative;
-}
-.numero {
-  width: 8%;
-  height: 30px;
-  font-size: 16px;
-  color: #0085cf !important;
-  position: relative;
-}
-.bairro {
-  width: 18%;
-  height: 30px;
-  font-size: 16px;
-  color: #0085cf !important;
-  position: relative;
-}
-.cidade {
-  width: 40%;
-  height: 30px;
-  font-size: 16px;
-  color: #0085cf !important;
-  position: relative;
-}
-.estado {
-  width: 40%;
-  height: 30px;
-  font-size: 16px;
-  color: #0085cf !important;
-  position: relative;
-}
-.email {
-  width: 30%;
-  height: 30px;
-  font-size: 16px;
-  color: #0085cf !important;
-  position: relative;
-}
-.cpf {
-  width: 20%;
-  height: 30px;
-  font-size: 16px;
-  color: #0085cf !important;
-  position: relative;
-}
-.telefone {
-  width: 20%;
-  height: 30px;
-  font-size: 16px;
-  color: #0085cf !important;
-  position: relative;
-}
-.celular {
-  width: 20%;
-  height: 30px;
-  font-size: 16px;
-  color: #0085cf !important;
-  position: relative;
-}
-.nascimento {
-  width: 21%;
-  height: 30px;
-  font-size: 16px;
-  color: #0085cf !important;
-  position: relative;
-}
-.sexo {
-  width: 15%;
-  height: 30px;
-  font-size: 16px;
-  color: #0085cf !important;
-  position: relative;
-}
-.inputs{
-  width: 18%;
-  height: 30px;
-  font-size: 16px;
-  color: #0085cf !important;
-  position: relative;
-}
-</style>
+
 <div class="cadastro">
 <p>
 <strong>Rua:</strong>
 
-  <input required class="rua" type="text" name="rua" value="<?php echo get_post_meta( $apoiador->ID, 'rua', true ); ?>" />
+  <input required class="widefat" type="text" name="rua" value="<?php echo get_post_meta( $apoiador->ID, 'rua', true ); ?>" />
 
   <strong>Numero: </strong>
 
-  <input required  type="text" class="numero" name="nr" value="<?php echo get_post_meta( $apoiador->ID, 'nr', true ); ?>" />
-
+  <input required  type="text" class="widefat" name="nr" value="<?php echo get_post_meta( $apoiador->ID, 'nr', true ); ?>" />
+</p>
+<p>
  <strong>Complemento: </strong>
 
-  <input  type="text" class="inputs" name="cpl" value="<?php echo get_post_meta( $apoiador->ID, 'cpl', true ); ?>" />
+  <input  type="text" class="widefat" name="cpl" value="<?php echo get_post_meta( $apoiador->ID, 'cpl', true ); ?>" />
 </p>
+
 <p>
 <strong>Bairro: </strong>
 
-  <input required  type="text" class="bairro" name="bairro" value="<?php echo get_post_meta( $apoiador->ID, 'bairro', true ); ?>" />
+  <input required  type="text" class="widefat" name="bairro" value="<?php echo get_post_meta( $apoiador->ID, 'bairro', true ); ?>" />
 </p>
+
+<p>
   <strong>Cidade: </strong>
   
-  <input required type="text" name="cidade" class="cidade" value="<?php echo get_post_meta( $apoiador->ID, 'cidade', true ); ?>" />
+  <input required type="text" name="widefat" class="widefat" value="<?php echo get_post_meta( $apoiador->ID, 'cidade', true ); ?>" />
+</p>
 
+<p>
   <strong>Estado: </strong>
 
 <select class="estado" name="est"> 
@@ -205,8 +121,7 @@ $values = array(
                   "TO"=>"Tocantins"
                 );
 
-foreach ($values as $val) {
-  ?>
+foreach ($values as $val) {?>
   <option value="<?php echo $val?>" <?php if ($valor==$val ){echo 'SELECTED';}?>> <?php echo $val?></option>
   <?php
 }
@@ -216,14 +131,17 @@ foreach ($values as $val) {
 <p>
  <strong>Telefone: </strong>
   
-  <input required  type="tel" id="tel" name="fone" class="telefone" value="<?php echo get_post_meta( $apoiador->ID, 'fone', true ); ?>" /> 
-
+  <input required  type="tel" id="tel" name="fone" class="widefat" value="<?php echo get_post_meta( $apoiador->ID, 'fone', true ); ?>" /> 
+</p>
+<p>
   <strong>Celular: </strong>
 
-  <input   type="tel" id="telad" name="celular" class="celular" value="<?php echo get_post_meta( $apoiador->ID, 'celular', true ); ?>" />
+  <input   type="tel" id="telad" name="celular" class="widefat" value="<?php echo get_post_meta( $apoiador->ID, 'celular', true ); ?>" />
+  </p>
+<p>
 <strong>Sexo: </strong>
 
-<select class="sexo" name="sexo"> 
+<select class="widefat" name="sexo"> 
 <?php
 $valor = get_post_meta($apoiador->ID, 'sexo', true );
 $values = array(""=> "Escolha o Sexo","M"=> "Masculino","F"=> "Feminino");
@@ -236,20 +154,22 @@ foreach ($values as $val) {?>
 </select> 
 
 </p>
+
 <p>
   <strong>Email: </strong>
  
-  <input  type="email" class="email" name="email" value="<?php echo get_post_meta( $apoiador->ID, 'email', true ); ?>" />
+  <input  type="email" class="widefat" name="email" value="<?php echo get_post_meta( $apoiador->ID, 'email', true ); ?>" />
+</p>
 
+<p>
   <strong>CPF: </strong>
   
-  <input  type="text" id="cpf1" name="cpf" class="cpf" value="<?php echo get_post_meta( $apoiador->ID, 'cpf', true ); ?>" />
+  <input  type="text" id="cpf1" name="cpf" class="widefat" value="<?php echo get_post_meta( $apoiador->ID, 'cpf', true ); ?>" />
 </p>
+
+<p>
 <strong>Data de Nascimento: </strong>
-  <input  type="date" class="nascimento"  name="nasci" value="<?php echo get_post_meta( $apoiador->ID, 'nasci', true ); ?>" />
-
-
-</p>
+  <input  type="date" class="widefat"  name="nasci" value="<?php echo get_post_meta( $apoiador->ID, 'nasci', true ); ?>" />
 </div>
 <?php
 }
