@@ -15,6 +15,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 register_activation_hook( __FILE__, 'setPermissions' );
 
+
+load_textdomain( 'wpanimal', dirname(__FILE__) . '/langs/wpanimal.mo');
 //Invocacoes Necessarias
 
 require_once dirname(__FILE__) . '/cfgs/permissoes.php';
