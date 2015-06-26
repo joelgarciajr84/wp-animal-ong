@@ -68,3 +68,7 @@ GNU
 
 
 ** Use a vontade **
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/joelgarciajr84/wp-animal-ong/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
