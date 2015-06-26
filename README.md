@@ -1,6 +1,9 @@
 =============
 # WP Animal ONG
 
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/joelgarciajr84/wp-animal-ong/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
+
 WPAnimal ONG é um plugin para WordPress que visa auxiliar na gestão de ONG's que resgatam e cuidam de animais.
 
 ##Funcionalidades Versao 1.0:
@@ -70,5 +73,4 @@ GNU
 ** Use a vontade **
 
 
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/joelgarciajr84/wp-animal-ong/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
