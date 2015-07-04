@@ -24,7 +24,6 @@ function titulos_personalizados( $input ) {
 
     if ('veterinario' == $post_type )
         return __( 'Digite o nome do Veterinario', 'wpanimal' );
-    
 
     return $input;
 }
