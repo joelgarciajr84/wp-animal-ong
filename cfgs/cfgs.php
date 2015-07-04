@@ -29,7 +29,6 @@ function HomeWPAnimalOng() {
 			if($post_type->show_in_menu==false) {
 				continue;
 			}
-
 			$num_posts = wp_count_posts( $post_type->name );
 			$num = number_format_i18n( $num_posts->publish );
 			$text = _n( $post_type->labels->singular_name, $post_type->labels->name, $num_posts->publish );
