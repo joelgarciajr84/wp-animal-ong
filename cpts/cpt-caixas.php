@@ -103,6 +103,94 @@ switch ($saldoatual) {
   </p>
 <?php
 }
+#Metabox Informações dos caixas
+
+add_action( 'add_meta_boxes', 'snippet_report_caixa' );
+
+function snippet_report_caixa() {
+  add_meta_box(
+    'snippet_report_caixa_id',
+    __('Movimentações recentes neste caixa','wpanimal'),
+    'inner_movimentacao',
+    'caixas',
+    'normal'
+  );
+}
+function inner_movimentacao($caixas){?>
+
+	<style type="text/css">
+
+	.tg  {
+		border-collapse:collapse;
+		border-spacing:0;
+		border-color:#aabcfe;
+		width: 100%;
+	}
+	.tg td{
+		font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;
+		border-style:solid;border-width:1px;
+		overflow:hidden;word-break:normal;
+		border-color:#aabcfe;
+		color:#669;
+		background-color:#e8edff;
+	}
+	.tg th{
+		font-family:Arial, sans-serif;
+		font-size:14px;
+		font-weight:normal;
+		padding:10px 5px;
+		border-style:solid;
+		border-width:1px;
+		overflow:hidden;
+		word-break:normal;
+		border-color:#aabcfe;
+		color:#039;
+		background-color:#b9c9fe;
+	}
+
+	</style>
+<?php
+	$args = array(
+		'posts_per_page'   => 5,
+		'orderby'          => 'date',
+		'order'            => 'DESC',
+		'meta_key'         => 'caixa_lancamento',
+		'meta_value'       =>  $caixas->ID,
+		'post_type'        => 'lancamentocaixa',
+		'post_status'      => 'publish',
+		'suppress_filters' => true 
+	);
+	$ultimoslancamentos = get_posts( $args );
+
+	if(!is_array($ultimoslancamentos) || empty($ultimoslancamentos)){
+		return;
+	}
+	?>
+	<table class="tg">
+		<tr>
+			<th class="tg-031e"><?php  echo __( 'ID' ); ?></th>
+			<th class="tg-031e"><?php  echo __( 'Lançamento' ); ?></th>
+			<th class="tg-031e"><?php  echo __( 'Valor' ); ?></th>
+			<th class="tg-031e"><?php  echo __( 'Tipo' ); ?></th>
+			<th class="tg-031e"><?php  echo __( 'Data' ); ?></th>
+			<th class="tg-031e"><?php  echo __( 'Usuario' ); ?></th>
+		</tr>
+		
+		<?php foreach ($ultimoslancamentos as $lancamento):?>
+
+			<tr>
+				<td class="tg-031e"><?php echo $lancamento->ID; ?></td>
+				<td class="tg-031e"><?php echo $lancamento->post_title; ?></td>
+				<td class="tg-031e"><?php echo get_post_meta($lancamento->ID, 'valor_lancamento', true); ?></td>
+				<td class="tg-031e"><?php echo get_post_meta($lancamento->ID, 'tipo_lancamento', true); ?></td>
+				<td class="tg-031e"><?php echo date(('d/m/Y H:i:s'), strtotime($lancamento->post_date)); ?></td>
+				<td class="tg-031e"><?php echo get_the_author_meta( 'user_nicename', $lancamento->post_author );?></td>
+			</tr>	
+		<?php endforeach; ?>
+	
+	</table>
+<?php
+}
 add_action( 'save_post', 'salva_metas_caixas', 10, 2 );
 
 function salva_metas_caixas( $caixas_id, $caixas ) {

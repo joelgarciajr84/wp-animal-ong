@@ -103,7 +103,7 @@ function lancamentocaixa($lancamentocaixa) {
 
   echo '<br><br>';
 
-  echo '<select style="width: 100%; color: blue; font-size: 14px;" name="caixa_lancamento" id="caixa_lancamento">';
+  echo '<select required style="width: 100%; color: blue; font-size: 14px;" name="caixa_lancamento" id="caixa_lancamento">';
 
   echo '<option value="">Selecione um Caixa</option>';
 
