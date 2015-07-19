@@ -60,11 +60,11 @@ function apoiador($apoiador) {?>
 <p>
 <strong>Rua:</strong>
 
-  <input required class="widefat" type="text" name="rua" value="<?php echo get_post_meta( $apoiador->ID, 'rua', true ); ?>" />
+  <input  class="widefat" type="text" name="rua" value="<?php echo get_post_meta( $apoiador->ID, 'rua', true ); ?>" />
 
   <strong>Numero: </strong>
 
-  <input required  type="text" class="widefat" name="nr" value="<?php echo get_post_meta( $apoiador->ID, 'nr', true ); ?>" />
+  <input   type="text" class="widefat" name="nr" value="<?php echo get_post_meta( $apoiador->ID, 'nr', true ); ?>" />
 </p>
 <p>
  <strong>Complemento: </strong>
@@ -131,7 +131,7 @@ foreach ($values as $val) {?>
 <p>
  <strong>Telefone: </strong>
   
-  <input required  type="tel" id="tel" name="fone" class="widefat" value="<?php echo get_post_meta( $apoiador->ID, 'fone', true ); ?>" /> 
+  <input  required type="tel" id="tel" name="fone" class="widefat" value="<?php echo get_post_meta( $apoiador->ID, 'fone', true ); ?>" /> 
 </p>
 <p>
   <strong>Celular: </strong>
