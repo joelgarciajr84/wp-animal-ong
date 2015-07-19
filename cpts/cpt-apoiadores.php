@@ -81,7 +81,7 @@ function apoiador($apoiador) {?>
 <p>
   <strong>Cidade: </strong>
   
-  <input required type="text" name="widefat" class="widefat" value="<?php echo get_post_meta( $apoiador->ID, 'cidade', true ); ?>" />
+  <input required type="text" name="cidade" class="widefat" value="<?php echo get_post_meta( $apoiador->ID, 'cidade', true ); ?>" />
 </p>
 
 <p>
