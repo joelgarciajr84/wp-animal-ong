@@ -6,20 +6,19 @@ add_action( 'admin_menu', 'remove_wp_menus' );
 
 function remove_wp_menus() {
 
-	remove_menu_page('edit.php');
-	remove_menu_page('edit.php?post_type=page');
-	remove_menu_page('plugins.php');
-	remove_menu_page('tools.php');
-	remove_menu_page('update-core.php');
-	remove_menu_page('upload.php');
+	if ( !current_user_can('administrator') ) {
 
-	if ( !current_user_can('edit_caixas') ) {
-
+		remove_menu_page('edit.php');
+		remove_menu_page('edit.php?post_type=page');
+		remove_menu_page('plugins.php');
+		remove_menu_page('tools.php');
+		remove_menu_page('update-core.php');
+		remove_menu_page('upload.php');
+		remove_menu_page('themes.php');
+		remove_menu_page('options-general.php');
 		remove_menu_page('edit-comments.php');
 	}
-
-	remove_menu_page('themes.php');
-	remove_menu_page('options-general.php');
+	
 
 }
 
