@@ -247,4 +247,3 @@ function cria_manage_veterinario_columns( $column, $post_id ) {
     break;
   } 
 }
-?>

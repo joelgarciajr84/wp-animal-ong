@@ -1,4 +1,8 @@
+=============
 # WP Animal ONG
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/joelgarciajr84/wp-animal-ong/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+[![Build Status](https://travis-ci.org/joelgarciajr84/wp-animal-ong.png?branch=master)](https://travis-ci.org/joelgarciajr84/wp-animal-ong)
 
 WPAnimal ONG é um plugin para WordPress que visa auxiliar na gestão de ONG's que resgatam e cuidam de animais.
 
@@ -23,22 +27,14 @@ WPAnimal ONG é um plugin para WordPress que visa auxiliar na gestão de ONG's q
 
 #### Prints:
 
-![](https://lh6.googleusercontent.com/TjEOXklrOO-QJRsOdJfJH9WrFf12Q8BbzV7ysJuflVdvatr14ljV8VDiqmnK-2d703v2ZiMMWv8=w1831-h995 "Foto 1")
-
-![](https://lh4.googleusercontent.com/uheZXEdJn12x8IgysRWiXAJgONugTAP7GUrDwpit-zt4__USjCYCazJas9W600LxUDAFhB6JKbc=w1831-h995 "Foto 2")
-
-![](https://lh5.googleusercontent.com/cBifEjpF_j-o0gi_SJHyjt9-mEWEbf26LVIuzb3VA7JNrbKQ9ljje1q6PwUXyK7aiwsqQs0GG8Y=w1831-h995 "Foto 3")
-
-![](https://lh4.googleusercontent.com/gOiFu3RvoD53-8oGdb6HOcb_ywAOFdB1Ki8RoIegLG8taLniCFhHQfnCrHXPTsnFAlN-ExLaAEM=w1831-h995 "Foto 4")
-
-![](https://lh3.googleusercontent.com/aPvIbHYsNCTOWcq4HhaRRgCOgJr2IqMwDmDsA_-Y0DvW3YubZn9esw6ILdM5poMt3mWSch3hrw8=w1831-h995 "Foto 5")
-
-
-
-
-
-
-
+![](https://raw.githubusercontent.com/joelgarciajr84/wp-animal-ong/master/images/prints/print-1.png "Foto 1")
+![](https://raw.githubusercontent.com/joelgarciajr84/wp-animal-ong/master/images/prints/print-2.png "Foto 2")
+![](https://raw.githubusercontent.com/joelgarciajr84/wp-animal-ong/master/images/prints/print-3.png "Foto 3")
+![](https://raw.githubusercontent.com/joelgarciajr84/wp-animal-ong/master/images/prints/print-4.png "Foto 4")
+![](https://raw.githubusercontent.com/joelgarciajr84/wp-animal-ong/master/images/prints/print-5.png "Foto 5")
+![](https://raw.githubusercontent.com/joelgarciajr84/wp-animal-ong/master/images/prints/print-6.png "Foto 6")
+![](https://raw.githubusercontent.com/joelgarciajr84/wp-animal-ong/master/images/prints/print-7.png "Foto 7")
+![](https://raw.githubusercontent.com/joelgarciajr84/wp-animal-ong/master/images/prints/print-8.png "Foto 8")
 
 ### Dependencias:
 
@@ -54,12 +50,20 @@ $ git clone https://github.com/joelgarciajr84/wp-animal-ong.git wp-animal-ong
 ```
 
 
-### Todo's
+### Quer Contribuir? 
 
- - Testar
- - Implementacao de relatorios
- - Usar api Google Maps 
+1. Faça um [fork](https://help.github.com/articles/fork-a-repo/) do repositório;
+3. [Configure seu fork](https://help.github.com/articles/configuring-a-remote-for-a-fork/);
+2. Verifique as [issues](https://github.com/joelgarciajr84/wp-animal-ong/issues) e escolha uma que não tenha ninguém trabalhando;
+4. [Sincronize seu fork](https://help.github.com/articles/syncing-a-fork/);
+2. Crie uma branch para trabalhar na issue da sua responsabilidade: `git checkout -b issue-17`;
+3. Commit as alterações que você fez: `git commit -m 'Add Alguma coisa nova'`;
+4. Faça um push para a branch: `git push origin issue-17`;
+5. Faça um [Pull Request](https://help.github.com/articles/using-pull-requests/) :D
 
+**Observação:** Se deseja contribuir com algo que não foi registrado nas [issues](https://github.com/joelgarciajr84/wp-animal-ong/issues) é importante criar e assinar para evitar que outra pessoa comece a trabalhar na mesma coisa que você.
+
+Se precisar de ajuda para executar algum dos procedimentos acima acesse o link e [aprenda como fazer um Pull Request](http://pythonclub.com.br/como-fazer-fork-clone-push-pull-request-no-github.html).
 License
 ----
 
@@ -67,3 +71,6 @@ GNU
 
 
 ** Use a vontade **
+
+
+

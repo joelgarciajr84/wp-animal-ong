@@ -1,0 +1,807 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Animal ONG\n"
+"POT-Creation-Date: 2015-06-21 22:36-0300\n"
+"PO-Revision-Date: 2015-06-21 22:36-0300\n"
+"Last-Translator: Joel <joel.garciajr84@gmail.com>\n"
+"Language-Team:  <joel.garciajr84@gmail.com>\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-KeywordsList: __;_;gettext;gettext_noop\n"
+"X-Poedit-Basepath: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-"
+"ong/cpts\n"
+"X-Poedit-SearchPath-1: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-"
+"ong/cfgs\n"
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-animais.php:10
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-animais.php:11
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-animais.php:216
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-aplicacao-medicamentos.php:171
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-adocoes.php:159
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-procedimentos.php:152
+msgid "Animal"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-animais.php:12
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-animais.php:13
+msgid "Adicionar Animal"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-animais.php:14
+msgid "Editar Animal"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-animais.php:15
+msgid "Novo Animal"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-animais.php:16
+msgid "Ver Animal"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-animais.php:17
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-caixas.php:17
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-aplicacao-medicamentos.php:17
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-medicamentos.php:17
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-lares-adocao.php:17
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-adocoes.php:17
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-lancamento-caixa.php:17
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-apoiadores.php:17
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-entrada-medicamentos.php:17
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-veterinarios.php:17
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-procedimentos.php:17
+msgid "Pesquisar"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-animais.php:18
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-animais.php:19
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-caixas.php:18
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-caixas.php:19
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-aplicacao-medicamentos.php:18
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-aplicacao-medicamentos.php:19
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-medicamentos.php:18
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-medicamentos.php:19
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-lares-adocao.php:18
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-lares-adocao.php:19
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-adocoes.php:18
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-adocoes.php:19
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-lancamento-caixa.php:18
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-lancamento-caixa.php:19
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-apoiadores.php:18
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-apoiadores.php:19
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-entrada-medicamentos.php:18
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-entrada-medicamentos.php:19
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-veterinarios.php:18
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-veterinarios.php:19
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-procedimentos.php:18
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-procedimentos.php:19
+msgid "Nada Aqui"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-animais.php:20
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-animais.php:21
+msgid "Animais"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-animais.php:52
+msgid "Dados do Animal"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-animais.php:106
+msgid "Local do Resgate"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-animais.php:217
+msgid "Data do Resgate"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-animais.php:218
+msgid "Resgatante"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-animais.php:219
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-medicamentos.php:145
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-lares-adocao.php:193
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-adocoes.php:163
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-apoiadores.php:225
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-veterinarios.php:191
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cfgs/cfgs-titulos.php:45
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cfgs/cfgs-titulos.php:61
+msgid "Foto"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-animais.php:237
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-animais.php:249
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-caixas.php:147
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-aplicacao-medicamentos.php:198
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-aplicacao-medicamentos.php:209
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-aplicacao-medicamentos.php:220
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-aplicacao-medicamentos.php:229
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-medicamentos.php:163
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-medicamentos.php:175
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-medicamentos.php:186
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-lares-adocao.php:211
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-lares-adocao.php:223
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-lares-adocao.php:234
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-adocoes.php:181
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-adocoes.php:195
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-adocoes.php:219
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-lancamento-caixa.php:213
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-lancamento-caixa.php:224
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-lancamento-caixa.php:241
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-apoiadores.php:243
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-apoiadores.php:255
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-apoiadores.php:266
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-entrada-medicamentos.php:160
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-entrada-medicamentos.php:171
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-entrada-medicamentos.php:180
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-veterinarios.php:209
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-veterinarios.php:221
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-veterinarios.php:232
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-procedimentos.php:173
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-procedimentos.php:187
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-procedimentos.php:199
+msgid "Não cadastrado"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-caixas.php:10
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-caixas.php:11
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-caixas.php:20
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-caixas.php:21
+msgid "Caixas"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-caixas.php:12
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-caixas.php:13
+msgid "Adicionar Caixa"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-caixas.php:14
+msgid "Editar Caixa"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-caixas.php:15
+msgid "Novo Caixa"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-caixas.php:16
+msgid "Ver Caixa"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-caixas.php:63
+msgid "Dados do Caixa"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-caixas.php:127
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-lancamento-caixa.php:188
+msgid "Caixa"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-caixas.php:128
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-entrada-medicamentos.php:136
+msgid "Responsavel"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-caixas.php:129
+msgid "Saldo"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-aplicacao-medicamentos.php:10
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-aplicacao-medicamentos.php:11
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-aplicacao-medicamentos.php:20
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-aplicacao-medicamentos.php:21
+msgid "Aplicacao de Medicamento"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-aplicacao-medicamentos.php:12
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-aplicacao-medicamentos.php:13
+msgid "Adicionar Aplicacao de Medicamento"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-aplicacao-medicamentos.php:14
+msgid "Editar Aplicacao de Medicamento"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-aplicacao-medicamentos.php:15
+msgid "Novo Aplicacao de Medicamento"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-aplicacao-medicamentos.php:16
+msgid "Ver Aplicacao de Medicamento"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-aplicacao-medicamentos.php:52
+msgid "Dados da Aplicacao"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-aplicacao-medicamentos.php:169
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-lancamento-caixa.php:10
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-lancamento-caixa.php:11
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-lancamento-caixa.php:187
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-entrada-medicamentos.php:133
+msgid "Lancamento"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-aplicacao-medicamentos.php:170
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-medicamentos.php:10
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-medicamentos.php:11
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-medicamentos.php:141
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-entrada-medicamentos.php:134
+msgid "Medicamento"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-aplicacao-medicamentos.php:172
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-entrada-medicamentos.php:135
+msgid "Quantidade"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-aplicacao-medicamentos.php:173
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-lancamento-caixa.php:191
+msgid "Usuario"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-medicamentos.php:12
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-medicamentos.php:13
+msgid "Adicionar Medicamento"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-medicamentos.php:14
+msgid "Editar Medicamento"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-medicamentos.php:15
+msgid "Novo Medicamento"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-medicamentos.php:16
+msgid "Ver Medicamento"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-medicamentos.php:20
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-medicamentos.php:21
+msgid "Medicamentos"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-medicamentos.php:51
+msgid "Dados do Medicamento"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-medicamentos.php:142
+msgid "Marca"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-medicamentos.php:143
+msgid "Tipo"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-medicamentos.php:144
+msgid "Estoque"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-lares-adocao.php:10
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-lares-adocao.php:11
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-lares-adocao.php:189
+msgid "Lar"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-lares-adocao.php:12
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-lares-adocao.php:13
+msgid "Adicionar Lar"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-lares-adocao.php:14
+msgid "Editar Lar"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-lares-adocao.php:15
+msgid "Novo Lar"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-lares-adocao.php:16
+msgid "Ver Lar"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-lares-adocao.php:20
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-lares-adocao.php:21
+msgid "Lares"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-lares-adocao.php:51
+msgid "Dados do lares"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-lares-adocao.php:190
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-apoiadores.php:222
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-veterinarios.php:188
+msgid "Cidade"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-lares-adocao.php:191
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-apoiadores.php:223
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-veterinarios.php:189
+msgid "Bairro"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-lares-adocao.php:192
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-apoiadores.php:224
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-veterinarios.php:190
+msgid "Telefone"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-adocoes.php:10
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-adocoes.php:11
+msgid "Adoção"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-adocoes.php:12
+msgid "Adicionar Adoção"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-adocoes.php:13
+msgid "Fazer nova Adoção"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-adocoes.php:14
+msgid "Editar Adoção"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-adocoes.php:15
+msgid "Nova Adoção"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-adocoes.php:16
+msgid "Ver Adoção"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-adocoes.php:20
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-adocoes.php:21
+msgid "Adoções"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-adocoes.php:51
+msgid "Dados da Adocao"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-adocoes.php:158
+msgid "Adocao"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-adocoes.php:160
+msgid "Data da Adocao"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-adocoes.php:161
+msgid "Data Final Adocao"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-adocoes.php:162
+msgid "Adotante"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-adocoes.php:207
+msgid "Adocao Definitiva"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-lancamento-caixa.php:12
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-lancamento-caixa.php:13
+msgid "Adicionar Lancamento"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-lancamento-caixa.php:14
+msgid "Editar Lancamento"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-lancamento-caixa.php:15
+msgid "Novo Lancamento"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-lancamento-caixa.php:16
+msgid "Ver Lancamento"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-lancamento-caixa.php:20
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-lancamento-caixa.php:21
+msgid "Lancamentos"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-lancamento-caixa.php:63
+msgid "Dados do Lancamento"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-lancamento-caixa.php:189
+msgid "Valor"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-lancamento-caixa.php:190
+msgid "Operacao"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-apoiadores.php:10
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-apoiadores.php:11
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-apoiadores.php:21
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-apoiadores.php:221
+msgid "Apoiador"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-apoiadores.php:12
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-apoiadores.php:13
+msgid "Adicionar Apoiador"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-apoiadores.php:14
+msgid "Editar Apoiador"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-apoiadores.php:15
+msgid "Novo Apoiador"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-apoiadores.php:16
+msgid "Ver Apoiador"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-apoiadores.php:20
+msgid "Apoiadores"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-apoiadores.php:51
+msgid "Dados do Apoiador"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-entrada-medicamentos.php:10
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-entrada-medicamentos.php:11
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-entrada-medicamentos.php:20
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-entrada-medicamentos.php:21
+msgid "Entrada de Medicamento"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-entrada-medicamentos.php:12
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-entrada-medicamentos.php:13
+msgid "Adicionar Entrada de Medicamento"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-entrada-medicamentos.php:14
+msgid "Editar Entrada de Medicamento"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-entrada-medicamentos.php:15
+msgid "Novo Entrada de Medicamento"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-entrada-medicamentos.php:16
+msgid "Ver Entrada de Medicamento"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-entrada-medicamentos.php:52
+msgid "Dados da Entrada"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-veterinarios.php:10
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-veterinarios.php:11
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-veterinarios.php:187
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-procedimentos.php:154
+msgid "Veterinario"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-veterinarios.php:12
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-veterinarios.php:13
+msgid "Adicionar Veterinario"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-veterinarios.php:14
+msgid "Editar Veterinario"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-veterinarios.php:15
+msgid "Novo Veterinario"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-veterinarios.php:16
+msgid "Ver Veterinario"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-veterinarios.php:20
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-veterinarios.php:21
+msgid "Veterinarios"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-veterinarios.php:51
+msgid "Dados do Veterinario"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-procedimentos.php:10
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-procedimentos.php:11
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-procedimentos.php:20
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-procedimentos.php:21
+msgid "Procedimentos"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-procedimentos.php:12
+msgid "Adicionar Procedimentos"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-procedimentos.php:13
+msgid "Fazer novo Procedimento"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-procedimentos.php:14
+msgid "Editar Procedimentos"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-procedimentos.php:15
+msgid "Novo Procedimento"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-procedimentos.php:16
+msgid "Ver Procedimentos"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-procedimentos.php:51
+msgid "Dados do Procedimento"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-procedimentos.php:151
+msgid "Procedimento"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/cpt-procedimentos.php:153
+msgid "Data da Procedimento"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/taxonomias/tax-tipos-procedimento.php:8
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/taxonomias/tax-tipos-procedimento.php:9
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/taxonomias/tax-tipos-procedimento.php:12
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/taxonomias/tax-tipos-procedimento.php:21
+msgid "Tipos de Procedimento"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/taxonomias/tax-tipos-procedimento.php:10
+msgid "Pesquisar Tipos de Procedimento"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/taxonomias/tax-tipos-procedimento.php:11
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/taxonomias/tax-tipo-apoiador.php:11
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/taxonomias/tax-categoria-animal.php:11
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/taxonomias/tax-categoria-medicamentos.php:11
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/taxonomias/tax-especialidades-veterinario.php:11
+msgid "Populares"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/taxonomias/tax-tipos-procedimento.php:13
+msgid "Tipos de Procedimento Pai"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/taxonomias/tax-tipos-procedimento.php:14
+msgid "Tipos de Procedimento Pai:"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/taxonomias/tax-tipos-procedimento.php:15
+msgid "Editar Tipos de Procedimento"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/taxonomias/tax-tipos-procedimento.php:16
+msgid "Atualizar Tipos de Procedimento"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/taxonomias/tax-tipos-procedimento.php:17
+msgid "Adicionar Tipos de Procedimento"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/taxonomias/tax-tipos-procedimento.php:18
+msgid "Novas Tipos de Procedimento"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/taxonomias/tax-tipos-procedimento.php:19
+msgid "Adicionar ou remover Tipos de Procedimento"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/taxonomias/tax-tipos-procedimento.php:20
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/taxonomias/tax-tipo-apoiador.php:20
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/taxonomias/tax-categoria-animal.php:20
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/taxonomias/tax-categoria-medicamentos.php:20
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/taxonomias/tax-especialidades-veterinario.php:20
+msgid "Escolher entre os mais usados"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/taxonomias/tax-tipo-apoiador.php:8
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/taxonomias/tax-tipo-apoiador.php:9
+msgid "Tipo de Apoiador"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/taxonomias/tax-tipo-apoiador.php:10
+msgid "Pesquisar Tipos"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/taxonomias/tax-tipo-apoiador.php:12
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/taxonomias/tax-tipo-apoiador.php:21
+msgid "Tipos de Apoiadores"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/taxonomias/tax-tipo-apoiador.php:13
+msgid "Tipo Pai"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/taxonomias/tax-tipo-apoiador.php:14
+msgid "Tipo Pai:"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/taxonomias/tax-tipo-apoiador.php:15
+msgid "Editar Tipo de Apoiador"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/taxonomias/tax-tipo-apoiador.php:16
+msgid "Atualizar Tipo"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/taxonomias/tax-tipo-apoiador.php:17
+msgid "Adicionar Tipo de Apoiador"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/taxonomias/tax-tipo-apoiador.php:18
+msgid "Novo tipo de Apoiador"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/taxonomias/tax-tipo-apoiador.php:19
+msgid "Adicionar ou remover Tipos"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/taxonomias/tax-categoria-animal.php:8
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/taxonomias/tax-categoria-animal.php:9
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/taxonomias/tax-categoria-animal.php:12
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/taxonomias/tax-categoria-animal.php:21
+msgid "Tipo Animal"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/taxonomias/tax-categoria-animal.php:10
+msgid "Pesquisar Tipo animal"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/taxonomias/tax-categoria-animal.php:13
+msgid "Tipo Animal Pai"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/taxonomias/tax-categoria-animal.php:14
+msgid "Tipo Animal Pai:"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/taxonomias/tax-categoria-animal.php:15
+msgid "Editar Tipo Animal"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/taxonomias/tax-categoria-animal.php:16
+msgid "Atualizar Tipo Animal"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/taxonomias/tax-categoria-animal.php:17
+msgid "Adicionar Tipo Animal"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/taxonomias/tax-categoria-animal.php:18
+msgid "Novas Tipo Animal"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/taxonomias/tax-categoria-animal.php:19
+msgid "Adicionar ou remover Tipo Animal"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/taxonomias/tax-categoria-medicamentos.php:8
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/taxonomias/tax-categoria-medicamentos.php:9
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/taxonomias/tax-categoria-medicamentos.php:12
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/taxonomias/tax-categoria-medicamentos.php:21
+msgid "Categoria"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/taxonomias/tax-categoria-medicamentos.php:10
+msgid "Pesquisar Categoria"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/taxonomias/tax-categoria-medicamentos.php:13
+msgid "Categoria Pai"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/taxonomias/tax-categoria-medicamentos.php:14
+msgid "Categoria Pai:"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/taxonomias/tax-categoria-medicamentos.php:15
+msgid "Editar Categoria"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/taxonomias/tax-categoria-medicamentos.php:16
+msgid "Atualizar Categoria"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/taxonomias/tax-categoria-medicamentos.php:17
+msgid "Adicionar Categoria"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/taxonomias/tax-categoria-medicamentos.php:18
+msgid "Novas Categoria"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/taxonomias/tax-categoria-medicamentos.php:19
+msgid "Adicionar ou remover Categoria"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/taxonomias/tax-especialidades-veterinario.php:8
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/taxonomias/tax-especialidades-veterinario.php:9
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/taxonomias/tax-especialidades-veterinario.php:12
+msgid "Especialidade"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/taxonomias/tax-especialidades-veterinario.php:10
+msgid "Pesquisar Especialidade"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/taxonomias/tax-especialidades-veterinario.php:13
+msgid "Especialidade Pai"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/taxonomias/tax-especialidades-veterinario.php:14
+msgid "Especialidade Pai:"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/taxonomias/tax-especialidades-veterinario.php:15
+msgid "Editar Especialidade"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/taxonomias/tax-especialidades-veterinario.php:16
+msgid "Atualizar Especialidade"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/taxonomias/tax-especialidades-veterinario.php:17
+msgid "Adicionar Especialidade"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/taxonomias/tax-especialidades-veterinario.php:18
+msgid "Novas Especialidade"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/taxonomias/tax-especialidades-veterinario.php:19
+msgid "Adicionar ou remover Especialidade"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cpts/taxonomias/tax-especialidades-veterinario.php:21
+msgid "Especialidades"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cfgs/cfgs-titulos.php:11
+msgid "Digite o nome"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cfgs/cfgs-titulos.php:14
+msgid "Digite o nome do Medicamento"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cfgs/cfgs-titulos.php:17
+msgid "Digite o nome do Caixa"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cfgs/cfgs-titulos.php:20
+msgid "Digite o Titulo do Lancamento"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cfgs/cfgs-titulos.php:23
+msgid "Digite o nome do Animal"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cfgs/cfgs-titulos.php:26
+msgid "Digite o nome do Veterinario"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cfgs/cfgs-titulos.php:77
+msgid "Foto oficial"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cfgs/cfgs-titulos.php:93
+msgid "Imagem da Caixa"
+msgstr ""
+
+#: /var/www/html/aprobemgv/wp-content/plugins/wp-animal-ong/cfgs/permissoes.php:24
+msgid "Financeiro"
+msgstr ""

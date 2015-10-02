@@ -220,4 +220,3 @@ function cria_manage_procedimento_columns( $column, $post_id ) {
     */
   } 
 }
-?>

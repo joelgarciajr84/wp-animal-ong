@@ -1,3 +1,1 @@
-<?php 
-# Just for a better security
-?>
+<?php # Just for a better security

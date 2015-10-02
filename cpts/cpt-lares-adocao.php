@@ -249,4 +249,3 @@ function cria_manage_lar_columns( $column, $post_id ) {
     break;
   } 
 }
-?>

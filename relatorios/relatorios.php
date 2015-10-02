@@ -1,4 +1,1 @@
 <?php 
-
-echo "Relatorios aqui";
- ?>
