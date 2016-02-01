@@ -9,7 +9,7 @@
 	* Author URL: joel.garciajr84@gmail.com
 	* 
 */
-if ( ! defined( 'ABSPATH' ) ) {	exit; // Exit if accessed directly.}
+if ( ! defined( 'ABSPATH' ) ) {	exit;} // Exit if accessed directly.
 
 register_activation_hook( __FILE__, 'setPermissions' );
 
